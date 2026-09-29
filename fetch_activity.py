@@ -18,6 +18,7 @@ Usage:
     python fetch_activity.py --url https://connect.garmin.com/modern/activity/12345678901
     python fetch_activity.py --url https://connect.garmin.com/modern/activity/12345678901 --gpx
     python fetch_activity.py --url .../12345678901 --outdir ./exports
+    python fetch_activity.py --file activities.txt --outfile ./exports
 """
 
 import argparse
@@ -49,8 +50,32 @@ def login():
 def activity_id_from_url(url):
     match = re.search(r"/activity/(\d+)", url)
     if not match:
-        sys.exit(f"Could not find an activity ID in URL: {url}")
+        raise ValueError(f"Could not find an activity ID in URL: {url}")
     return match.group(1)
+
+
+def activities_from_file(path):
+    """Read activity URLs and their optional output names from a text file."""
+    activities = []
+    with open(path, encoding="utf-8") as activity_file:
+        for line_number, line in enumerate(activity_file, 1):
+            line = line.strip()
+            if not line:
+                continue
+
+            match = re.search(r"https?://\S+", line)
+            if not match:
+                raise ValueError(f"No activity URL found on line {line_number} of {path}")
+
+            label = re.sub(r"\s*->\s*$", "", line[:match.start()]).strip()
+            filename = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "_", "_".join(label.split()))
+            url = match.group(0)
+            activity_id = activity_id_from_url(url)
+            activities.append((url, activity_id, filename or f"activity_{activity_id}"))
+
+    if not activities:
+        raise ValueError(f"No activity URLs found in {path}")
+    return activities
 
 
 def fetch_all(api, activity_id):
@@ -78,42 +103,29 @@ def fetch_all(api, activity_id):
     return data
 
 
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--url", required=True, help="Garmin Connect activity URL")
-    ap.add_argument("--outdir", default=".", help="directory to save output files (default: current dir)")
-    ap.add_argument("--gpx", action="store_true", help="also download the GPX track")
-    ap.add_argument("--tcx", action="store_true", help="also download the TCX track")
-    args = ap.parse_args()
-
-    activity_id = activity_id_from_url(args.url)
-    os.makedirs(args.outdir, exist_ok=True)
-
-    api = login()
-
+def fetch_and_save(api, activity_id, filename, outdir, download_gpx, download_tcx):
     print(f"Fetching data for activity {activity_id}...", file=sys.stderr)
     data = fetch_all(api, activity_id)
 
-    json_path = os.path.join(args.outdir, f"activity_{activity_id}.json")
-    with open(json_path, "w") as f:
+    json_path = os.path.join(outdir, f"{filename}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, default=str)
     print(f"Saved metrics/splits/weather/gear -> {json_path}")
 
-    if args.gpx:
+    if download_gpx:
         gpx_bytes = api.download_activity(activity_id, dl_fmt=api.ActivityDownloadFormat.GPX)
-        gpx_path = os.path.join(args.outdir, f"activity_{activity_id}.gpx")
+        gpx_path = os.path.join(outdir, f"{filename}.gpx")
         with open(gpx_path, "wb") as f:
             f.write(gpx_bytes)
         print(f"Saved GPX track -> {gpx_path}")
 
-    if args.tcx:
+    if download_tcx:
         tcx_bytes = api.download_activity(activity_id, dl_fmt=api.ActivityDownloadFormat.TCX)
-        tcx_path = os.path.join(args.outdir, f"activity_{activity_id}.tcx")
+        tcx_path = os.path.join(outdir, f"{filename}.tcx")
         with open(tcx_path, "wb") as f:
             f.write(tcx_bytes)
         print(f"Saved TCX track -> {tcx_path}")
 
-    # Quick human-readable summary to stdout
     summary = data.get("summary") or {}
     if summary:
         name = summary.get("activityName", "Unnamed")
@@ -125,6 +137,34 @@ def main():
         print(f"  Date: {date}")
         print(f"  Distance: {distance_km:.2f} km")
         print(f"  Duration: {duration_min:.1f} min")
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    source = ap.add_mutually_exclusive_group(required=True)
+    source.add_argument("--url", help="Garmin Connect activity URL")
+    source.add_argument("-f", "--file", help="file containing activity URLs, one per line")
+    ap.add_argument(
+        "-o", "--outfile", "--outdir", dest="outfile", default=".",
+        help="directory to save output files (default: current dir)",
+    )
+    ap.add_argument("--gpx", action="store_true", help="also download the GPX track")
+    ap.add_argument("--tcx", action="store_true", help="also download the TCX track")
+    args = ap.parse_args()
+
+    try:
+        if args.file:
+            activities = activities_from_file(args.file)
+        else:
+            activity_id = activity_id_from_url(args.url)
+            activities = [(args.url, activity_id, f"activity_{activity_id}")]
+    except (OSError, ValueError) as e:
+        ap.error(str(e))
+
+    os.makedirs(args.outfile, exist_ok=True)
+    api = login()
+    for _, activity_id, filename in activities:
+        fetch_and_save(api, activity_id, filename, args.outfile, args.gpx, args.tcx)
 
 
 if __name__ == "__main__":
