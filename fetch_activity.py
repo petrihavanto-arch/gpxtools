@@ -19,13 +19,16 @@ Usage:
     python fetch_activity.py --url https://connect.garmin.com/modern/activity/12345678901 --gpx
     python fetch_activity.py --url .../12345678901 --outdir ./exports
     python fetch_activity.py --file activities.txt --outfile ./exports
+    python fetch_activity.py --file activities.txt --time 2
 """
 
 import argparse
 import json
+import math
 import os
 import re
 import sys
+import time
 
 from dotenv import load_dotenv
 from garminconnect import Garmin, GarminConnectAuthenticationError
@@ -76,6 +79,17 @@ def activities_from_file(path):
     if not activities:
         raise ValueError(f"No activity URLs found in {path}")
     return activities
+
+
+def non_negative_seconds(value):
+    """Parse a non-negative delay in seconds for argparse."""
+    try:
+        seconds = float(value)
+    except ValueError as e:
+        raise argparse.ArgumentTypeError("must be a number of seconds") from e
+    if not math.isfinite(seconds) or seconds < 0:
+        raise argparse.ArgumentTypeError("must be a finite, non-negative number")
+    return seconds
 
 
 def fetch_all(api, activity_id):
@@ -150,6 +164,10 @@ def main():
     )
     ap.add_argument("--gpx", action="store_true", help="also download the GPX track")
     ap.add_argument("--tcx", action="store_true", help="also download the TCX track")
+    ap.add_argument(
+        "-t", "--time", type=non_negative_seconds, default=0,
+        help="seconds to wait between fetching activities (default: 0)",
+    )
     args = ap.parse_args()
 
     try:
@@ -163,7 +181,9 @@ def main():
 
     os.makedirs(args.outfile, exist_ok=True)
     api = login()
-    for _, activity_id, filename in activities:
+    for index, (_, activity_id, filename) in enumerate(activities):
+        if index:
+            time.sleep(args.time)
         fetch_and_save(api, activity_id, filename, args.outfile, args.gpx, args.tcx)
 
 
