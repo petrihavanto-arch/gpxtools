@@ -154,7 +154,14 @@ def distance_meters(latitude1, longitude1, latitude2, longitude2):
 
 
 def closest_activity_names(records, latitude, longitude, count):
-    bounds = [validated_bounds(record, index) for index, record in enumerate(records, start=1)]
+    bounds = []
+    errors = []
+    for index, record in enumerate(records, start=1):
+        try:
+            bounds.append(validated_bounds(record, index))
+        except ValueError as error:
+            errors.append(str(error))
+
     distances = [
         distance_meters(latitude, longitude, *rectangle_center(activity_bounds))
         for activity_bounds in bounds
@@ -173,7 +180,7 @@ def closest_activity_names(records, latitude, longitude, count):
             key=distances.__getitem__,
         )
         selected.extend(nearest_indexes[:count - len(selected)])
-    return [bounds[index][0] for index in selected]
+    return [bounds[index][0] for index in selected], errors
 
 
 def main():
@@ -188,12 +195,19 @@ def main():
 
     try:
         records = read_records(args.file)
-        names = closest_activity_names(records, args.lat, args.lon, args.count)
+        names, errors = closest_activity_names(records, args.lat, args.lon, args.count)
+        if hasattr(sys.stderr, "reconfigure"):
+            sys.stderr.reconfigure(encoding="utf-8")
+        for error in errors:
+            print(f"Error: skipping {error}", file=sys.stderr)
+
         for name in names:
             if hasattr(sys.stdout, "reconfigure"):
                 sys.stdout.reconfigure(encoding="utf-8")
             print(name)
         logging.debug("Selected %d activity names from %d records", len(names), len(records))
+        if errors:
+            return 1
     except (OSError, UnicodeError, ValueError, json.JSONDecodeError) as error:
         if hasattr(sys.stderr, "reconfigure"):
             sys.stderr.reconfigure(encoding="utf-8")
