@@ -10,14 +10,18 @@ centers.
 Examples:
     python find_activities_near_coordinates.py --lat 60.17 --lon 24.94 --count 5 < list.txt
     python find_activities_near_coordinates.py --lat 60.17 --lon 24.94 -c 5 -f list.txt
+    python find_activities_near_coordinates.py --gmap 'https://maps.app.goo.gl/...' -c 5 -f list.txt
 """
 
 import argparse
 import json
 import logging
 import math
+import re
 import sys
 from pathlib import Path
+from urllib.parse import parse_qs, unquote, urlsplit
+from urllib.request import Request, urlopen
 
 
 LOG_FILE = Path(__file__).with_name(f"{Path(__file__).stem}.log")
@@ -27,12 +31,19 @@ EARTH_RADIUS_METERS = 6_371_000
 def parse_args():
     """Parse and validate command-line arguments."""
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--lat", type=latitude_argument, required=True, help="target latitude, from -90 to 90")
-    parser.add_argument("--lon", type=longitude_argument, required=True, help="target longitude, from -180 to 180")
+    parser.add_argument("--lat", type=latitude_argument, help="target latitude, from -90 to 90")
+    parser.add_argument("--lon", type=longitude_argument, help="target longitude, from -180 to 180")
+    parser.add_argument("-g", "--gmap", help="Google Maps link to the target location (instead of --lat/--lon)")
     parser.add_argument("-c", "--count", type=positive_integer, required=True, help="number of activity names to return")
     parser.add_argument("-f", "--file", type=Path, help="bounds JSON file (default: read UTF-8 JSON from stdin)")
     parser.add_argument("-d", action="store_true", help="write DEBUG logs to this script's log file")
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    if args.gmap and (args.lat is not None or args.lon is not None):
+        parser.error("--gmap cannot be combined with --lat or --lon")
+    if args.gmap is None and (args.lat is None or args.lon is None):
+        parser.error("provide either --gmap or both --lat and --lon")
+    return args
 
 
 def latitude_argument(value):
@@ -63,6 +74,66 @@ def positive_integer(value):
     if count < 1:
         raise argparse.ArgumentTypeError("count must be a positive integer")
     return count
+
+
+def map_coordinates(url):
+    """Extract latitude and longitude from a resolved Google Maps URL."""
+    decoded_url = unquote(url)
+    patterns = (
+        r"@(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)",
+        r"!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, decoded_url)
+        if match:
+            latitude, longitude = float(match.group(1)), float(match.group(2))
+            break
+    else:
+        query = parse_qs(urlsplit(decoded_url).query)
+        match = None
+        for key in ("q", "query", "ll", "center", "destination"):
+            for value in query.get(key, []):
+                match = re.search(r"(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)", value)
+                if match:
+                    break
+            if match:
+                break
+        if not match:
+            raise ValueError("Could not find coordinates in the Google Maps link")
+        latitude, longitude = float(match.group(1)), float(match.group(2))
+
+    if not math.isfinite(latitude) or not -90 <= latitude <= 90:
+        raise ValueError(f"Google Maps link contains an invalid latitude: {latitude}")
+    if not math.isfinite(longitude) or not -180 <= longitude <= 180:
+        raise ValueError(f"Google Maps link contains an invalid longitude: {longitude}")
+    return latitude, longitude
+
+
+def google_maps_coordinates(url):
+    """Follow a Google Maps link and read coordinates from its resolved URL."""
+    parsed_url = urlsplit(url)
+    host = (parsed_url.hostname or "").casefold()
+    if parsed_url.scheme not in {"http", "https"} or not (
+        host == "maps.app.goo.gl"
+        or host == "goo.gl"
+        or host == "google.com"
+        or host.endswith(".google.com")
+    ):
+        raise ValueError("The link must be a Google Maps URL")
+
+    request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urlopen(request, timeout=20) as response:
+        resolved_url = response.geturl()
+
+    resolved_host = (urlsplit(resolved_url).hostname or "").casefold()
+    if not (
+        resolved_host == "maps.app.goo.gl"
+        or resolved_host == "goo.gl"
+        or resolved_host == "google.com"
+        or resolved_host.endswith(".google.com")
+    ):
+        raise ValueError("The Google Maps link redirected outside Google")
+    return map_coordinates(resolved_url)
 
 
 def decode_file(data):
@@ -195,7 +266,11 @@ def main():
 
     try:
         records = read_records(args.file)
-        names, errors = closest_activity_names(records, args.lat, args.lon, args.count)
+        if args.gmap:
+            latitude, longitude = google_maps_coordinates(args.gmap)
+        else:
+            latitude, longitude = args.lat, args.lon
+        names, errors = closest_activity_names(records, latitude, longitude, args.count)
         if hasattr(sys.stderr, "reconfigure"):
             sys.stderr.reconfigure(encoding="utf-8")
         for error in errors:
