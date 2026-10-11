@@ -241,12 +241,16 @@ def bounds_record(name, points):
 
 def records_from_files(paths):
     records = []
+    errors = []
     for path in paths:
-        text = decode_file(path.read_bytes())
-        points = coordinates_from_text(text, path.name)
-        records.append(bounds_record(path.name, points))
-        logging.debug("Read %d coordinates from %s", len(points), path)
-    return records
+        try:
+            text = decode_file(path.read_bytes())
+            points = coordinates_from_text(text, path.name)
+            records.append(bounds_record(path.name, points))
+            logging.debug("Read %d coordinates from %s", len(points), path)
+        except (OSError, UnicodeError, ValueError, ET.ParseError, json.JSONDecodeError) as error:
+            errors.append(f"{path}: {error}")
+    return records, errors
 
 
 def main():
@@ -255,11 +259,16 @@ def main():
 
     try:
         if args.file:
-            records = records_from_files(expand_files(args.file))
+            records, errors = records_from_files(expand_files(args.file))
+            if errors and hasattr(sys.stderr, "reconfigure"):
+                sys.stderr.reconfigure(encoding="utf-8")
+            for error in errors:
+                print(f"Error: skipping {error}", file=sys.stderr)
         else:
             text = read_stdin()
             points = coordinates_from_text(text, "stdin")
             records = [bounds_record("stdin", points)]
+            errors = []
 
         output = json.dumps(records, ensure_ascii=False, indent=2)
         if args.outfile:
@@ -268,7 +277,11 @@ def main():
             if hasattr(sys.stdout, "reconfigure"):
                 sys.stdout.reconfigure(encoding="utf-8")
             print(output)
+        if errors:
+            return 1
     except (OSError, UnicodeError, ValueError, ET.ParseError, json.JSONDecodeError) as error:
+        if hasattr(sys.stderr, "reconfigure"):
+            sys.stderr.reconfigure(encoding="utf-8")
         print(f"Error: {error}", file=sys.stderr)
         return 1
     return 0
