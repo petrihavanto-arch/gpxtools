@@ -78,7 +78,28 @@ def activities_from_file(path):
 
     if not activities:
         raise ValueError(f"No activity URLs found in {path}")
-    return activities
+
+    name_counts = {}
+    for _, _, filename in activities:
+        name_counts[filename] = name_counts.get(filename, 0) + 1
+
+    used_names = {name for name, count in name_counts.items() if count == 1}
+    next_suffix = {}
+    unique_activities = []
+    for url, activity_id, filename in activities:
+        if name_counts[filename] > 1:
+            base_filename = filename
+            suffix = next_suffix.get(base_filename, 1)
+            candidate = f"{base_filename}_{suffix}"
+            while candidate in used_names:
+                suffix += 1
+                candidate = f"{base_filename}_{suffix}"
+            filename = candidate
+            next_suffix[base_filename] = suffix + 1
+            used_names.add(filename)
+        unique_activities.append((url, activity_id, filename))
+
+    return unique_activities
 
 
 def non_negative_seconds(value):
