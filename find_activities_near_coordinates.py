@@ -20,6 +20,7 @@ import math
 import re
 import sys
 from pathlib import Path
+from urllib.error import URLError
 from urllib.parse import parse_qs, unquote, urlsplit
 from urllib.request import Request, urlopen
 
@@ -80,6 +81,7 @@ def map_coordinates(url):
     """Extract latitude and longitude from a resolved Google Maps URL."""
     decoded_url = unquote(url)
     patterns = (
+        r"/maps/(?:search|place)/(-?\d+(?:\.\d+)?),\s*\+?\s*(-?\d+(?:\.\d+)?)(?:[/?]|$)",
         r"@(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)",
         r"!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)",
     )
@@ -283,7 +285,7 @@ def main():
         logging.debug("Selected %d activity names from %d records", len(names), len(records))
         if errors:
             return 1
-    except (OSError, UnicodeError, ValueError, json.JSONDecodeError) as error:
+    except (OSError, UnicodeError, ValueError, URLError, TimeoutError, json.JSONDecodeError) as error:
         if hasattr(sys.stderr, "reconfigure"):
             sys.stderr.reconfigure(encoding="utf-8")
         print(f"Error: {error}", file=sys.stderr)
