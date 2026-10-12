@@ -3,17 +3,50 @@ import json
 import sys
 import gpxpy
 
+HTML_TEMPLATE = """<!DOCTYPE html>
+<html>
+<head>
+    <title>GPX Route on Google Maps</title>
+    <style>
+        #map { height: 100vh; width: 100%; }
+        html, body { height: 100%; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            const coordinates = __COORDS__;
+            const mapOptions = {
+                zoom: 13,
+                center: __CENTER__
+            };
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            
+            const routePath = new google.maps.Polyline({
+                path: coordinates,
+                geodesic: true,
+                strokeColor: "#FF0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            routePath.setMap(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
+"""
+
 def parse_gpx(file_obj):
     gpx = gpxpy.parse(file_obj)
     coordinates = []
-
-    # Extract points from tracks
+    
     for track in gpx.tracks:
         for segment in track.segments:
             for point in segment.points:
                 coordinates.append({"lat": point.latitude, "lng": point.longitude})
                 
-    # Fallback to routes if tracks are empty
     if not coordinates:
         for route in gpx.routes:
             for point in route.points:
@@ -23,42 +56,9 @@ def parse_gpx(file_obj):
 
 def generate_html(coordinates):
     center = coordinates[0] if coordinates else {"lat": 0, "lng": 0}
-    
-    html_template = f"""<!DOCTYPE html>
-<html>
-<head>
-    <title>GPX Route on Google Maps</title>
-    <style>
-        #map {{ height: 100vh; width: 100%; }}
-        html, body {{ height: 100%; margin: 0; padding: 0; }}
-    </style>
-</head>
-<body>
-    <div id="map"></div>
-    <script>
-        function initMap() {{
-            const coordinates = {json.dumps(coordinates)};
-            const mapOptions = {{
-                zoom: 13,
-                center: {json.dumps(center)}
-            }};
-            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            
-            const routePath = new google.maps.Polyline({{
-                path: coordinates,
-                geodesic: true,
-                strokeColor: "#FF0000",
-                strokeOpacity: 1.0,
-                strokeWeight: 3
-            }});
-            routePath.setMap(map);
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-</body>
-</html>
-"""
-    return html_template
+    html = HTML_TEMPLATE.replace("__COORDS__", json.dumps(coordinates))
+    html = html.replace("__CENTER__", json.dumps(center))
+    return html
 
 def main():
     parser = argparse.ArgumentParser(description="Parse GPX file and generate an interactive Google Maps HTML page.")
