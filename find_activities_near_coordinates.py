@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-Find activity bounds containing a coordinate, then fill results by proximity.
+Find activity names whose selected center points are closest to a coordinate.
 
 Reads the JSON array produced by activity_bounds.py from UTF-8 stdin, or from
-a file supplied with -f/--file. Containing rectangles are preferred; if fewer
-than --count contain the coordinate, remaining results are the nearest rectangle
-centers.
+a file supplied with -f/--file. By default, ranks by distance to each
+``weighed_center``. Use ``-b/--box`` to rank by ``box_center`` instead.
 
 Examples:
     python find_activities_near_coordinates.py --lat 60.17 --lon 24.94 --count 5 < list.txt
-    python find_activities_near_coordinates.py --lat 60.17 --lon 24.94 -c 5 -f list.txt
+    python find_activities_near_coordinates.py --lat 60.17 --lon 24.94 --box -c 5 -f list.txt
     python find_activities_near_coordinates.py --gmap 'https://maps.app.goo.gl/...' -c 5 -f list.txt
 """
 
@@ -37,6 +36,9 @@ def parse_args():
     parser.add_argument("-g", "--gmap", help="Google Maps link to the target location (instead of --lat/--lon)")
     parser.add_argument("-c", "--count", type=positive_integer, required=True, help="number of activity names to return")
     parser.add_argument("-f", "--file", type=Path, help="bounds JSON file (default: read UTF-8 JSON from stdin)")
+    center = parser.add_mutually_exclusive_group()
+    center.add_argument("-b", "--box", action="store_true", help="rank by box_center instead of weighed_center")
+    center.add_argument("-w", "--weight", action="store_true", help="rank by weighed_center (the default)")
     parser.add_argument("-d", action="store_true", help="write DEBUG logs to this script's log file")
     args = parser.parse_args()
 
@@ -181,37 +183,26 @@ def coordinate(record, corner, axis, minimum, maximum, index):
     return value
 
 
-def validated_bounds(record, index):
+def validated_activity(record, index, center_field):
     if not isinstance(record, dict) or not isinstance(record.get("name"), str):
         raise ValueError(f"Record {index} must have a string 'name' field")
     name = record["name"]
     if not name:
         raise ValueError(f"Record {index} has an empty name")
 
-    north = coordinate(record, "NW", "latitude", -90, 90, index)
-    west = coordinate(record, "NW", "longitude", -180, 180, index)
-    south = coordinate(record, "SE", "latitude", -90, 90, index)
-    east = coordinate(record, "SE", "longitude", -180, 180, index)
-    if south > north:
-        raise ValueError(f"Record {index} has SE latitude north of NW latitude")
-    return name, north, west, south, east
-
-
-def contains(bounds, latitude, longitude):
-    _, north, west, south, east = bounds
-    longitude_is_inside = (
-        west <= longitude <= east
-        if west <= east
-        else longitude >= west or longitude <= east
-    )
-    return south <= latitude <= north and longitude_is_inside
-
-
-def rectangle_center(bounds):
-    _, north, west, south, east = bounds
-    longitude_span = (east - west) % 360
-    center_longitude = (west + longitude_span / 2 + 180) % 360 - 180
-    return (north + south) / 2, center_longitude
+    if center_field == "box_center" and center_field not in record:
+        north = coordinate(record, "NW", "latitude", -90, 90, index)
+        west = coordinate(record, "NW", "longitude", -180, 180, index)
+        south = coordinate(record, "SE", "latitude", -90, 90, index)
+        east = coordinate(record, "SE", "longitude", -180, 180, index)
+        if south > north:
+            raise ValueError(f"Record {index} has SE latitude north of NW latitude")
+        latitude = (north + south) / 2
+        longitude = (west + ((east - west) % 360) / 2 + 180) % 360 - 180
+    else:
+        latitude = coordinate(record, center_field, "latitude", -90, 90, index)
+        longitude = coordinate(record, center_field, "longitude", -180, 180, index)
+    return name, latitude, longitude
 
 
 def distance_meters(latitude1, longitude1, latitude2, longitude2):
@@ -226,34 +217,20 @@ def distance_meters(latitude1, longitude1, latitude2, longitude2):
     return 2 * EARTH_RADIUS_METERS * math.asin(min(1, math.sqrt(haversine)))
 
 
-def closest_activity_names(records, latitude, longitude, count):
-    bounds = []
+def closest_activity_names(records, latitude, longitude, count, center_field="weighed_center"):
+    activities = []
     errors = []
     for index, record in enumerate(records, start=1):
         try:
-            bounds.append(validated_bounds(record, index))
+            activities.append(validated_activity(record, index, center_field))
         except ValueError as error:
             errors.append(str(error))
 
-    distances = [
-        distance_meters(latitude, longitude, *rectangle_center(activity_bounds))
-        for activity_bounds in bounds
-    ]
-    containing_indexes = [
-        index for index, activity_bounds in enumerate(bounds)
-        if contains(activity_bounds, latitude, longitude)
-    ]
-    containing_indexes.sort(key=distances.__getitem__)
-
-    selected = containing_indexes[:count]
-    if len(selected) < count:
-        selected_indexes = set(selected)
-        nearest_indexes = sorted(
-            (index for index in range(len(bounds)) if index not in selected_indexes),
-            key=distances.__getitem__,
-        )
-        selected.extend(nearest_indexes[:count - len(selected)])
-    return [bounds[index][0] for index in selected], errors
+    ranked_activities = sorted(
+        activities,
+        key=lambda activity: distance_meters(latitude, longitude, activity[1], activity[2]),
+    )
+    return [activity[0] for activity in ranked_activities[:count]], errors
 
 
 def main():
@@ -272,7 +249,8 @@ def main():
             latitude, longitude = google_maps_coordinates(args.gmap)
         else:
             latitude, longitude = args.lat, args.lon
-        names, errors = closest_activity_names(records, latitude, longitude, args.count)
+        center_field = "box_center" if args.box else "weighed_center"
+        names, errors = closest_activity_names(records, latitude, longitude, args.count, center_field)
         if hasattr(sys.stderr, "reconfigure"):
             sys.stderr.reconfigure(encoding="utf-8")
         for error in errors:
