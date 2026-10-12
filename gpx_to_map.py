@@ -1,13 +1,7 @@
 import argparse
 import json
-import math
 import os
-import re
 import sys
-from urllib.error import URLError
-from urllib.parse import parse_qs, unquote, urlsplit
-from urllib.request import Request, urlopen
-
 import gpxpy
 from dotenv import load_dotenv
 
@@ -82,34 +76,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <script>
         function initMap() {
             const trackData = __TRACK_DATA__;
-            const linkedLocation = __GMAP_LOCATION__;
-            if (trackData.length === 0 && !linkedLocation) return;
+            if (trackData.length === 0) return;
 
-            const defaultCenter = trackData.length > 0 && trackData[0].coordinates.length > 0
+            const defaultCenter = trackData[0].coordinates.length > 0 
                 ? trackData[0].coordinates[0] 
-                : linkedLocation || {lat: 0, lng: 0};
+                : {lat: 0, lng: 0};
             
             const mapOptions = {
                 zoom: 13,
                 center: defaultCenter
             };
             const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-            if (linkedLocation) {
-                new google.maps.Marker({
-                    position: linkedLocation,
-                    map: map,
-                    icon: {
-                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                        scale: 7,
-                        fillColor: "#FF0000",
-                        fillOpacity: 1.0,
-                        strokeColor: "#990000",
-                        strokeWeight: 2
-                    },
-                    title: "Google Maps location"
-                });
-            }
             
             // Distinct track colors
             const colors = ["#E63946", "#1D3557", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261", "#D62828", "#6A040F"];
@@ -206,86 +183,20 @@ def parse_gpx_file(file_obj):
                 
     return coordinates
 
-def generate_html(track_data, gmap_location=None):
+def generate_html(track_data):
     api_key = os.getenv("GOOGLE_MAPS_JS_API", "YOUR_API_KEY")
     html = HTML_TEMPLATE.replace("__TRACK_DATA__", json.dumps(track_data))
-    html = html.replace("__GMAP_LOCATION__", json.dumps(gmap_location))
     html = html.replace("__API_KEY__", api_key)
     return html
-
-
-def map_coordinates(url):
-    """Extract latitude and longitude from a resolved Google Maps URL."""
-    decoded_url = unquote(url)
-    patterns = (
-        r"/maps/(?:search|place)/(-?\d+(?:\.\d+)?),\s*\+?\s*(-?\d+(?:\.\d+)?)(?:[/?]|$)",
-        r"@(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)",
-        r"!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)",
-    )
-    for pattern in patterns:
-        match = re.search(pattern, decoded_url)
-        if match:
-            latitude, longitude = float(match.group(1)), float(match.group(2))
-            break
-    else:
-        query = parse_qs(urlsplit(decoded_url).query)
-        match = None
-        for key in ("q", "query", "ll", "center", "destination"):
-            for value in query.get(key, []):
-                match = re.search(r"(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)", value)
-                if match:
-                    break
-            if match:
-                break
-        if not match:
-            raise ValueError("Could not find coordinates in the Google Maps link")
-        latitude, longitude = float(match.group(1)), float(match.group(2))
-
-    if not math.isfinite(latitude) or not -90 <= latitude <= 90:
-        raise ValueError(f"Google Maps link contains an invalid latitude: {latitude}")
-    if not math.isfinite(longitude) or not -180 <= longitude <= 180:
-        raise ValueError(f"Google Maps link contains an invalid longitude: {longitude}")
-    return {"lat": latitude, "lng": longitude}
-
-
-def google_maps_location(url):
-    """Resolve a Google Maps link and get its destination coordinates."""
-    allowed_host = lambda host: (
-        host == "maps.app.goo.gl"
-        or host == "goo.gl"
-        or host == "google.com"
-        or host.endswith(".google.com")
-    )
-    parsed_url = urlsplit(url)
-    host = (parsed_url.hostname or "").casefold()
-    if parsed_url.scheme not in {"http", "https"} or not allowed_host(host):
-        raise ValueError("The link must be a Google Maps URL")
-
-    request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urlopen(request, timeout=20) as response:
-        resolved_url = response.geturl()
-    if not allowed_host((urlsplit(resolved_url).hostname or "").casefold()):
-        raise ValueError("The Google Maps link redirected outside Google")
-    return map_coordinates(resolved_url)
-
 
 def main():
     parser = argparse.ArgumentParser(description="Parse GPX file(s) and generate an interactive Google Maps HTML page with markers and legend.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-f", "--file", help="Path to a single GPX file")
     group.add_argument("-r", "--read", help="Path to a text file containing a list of GPX file paths (one per line)")
-    parser.add_argument("-g", "--gmap", help="Google Maps link; add its location to the map with a red arrow")
     args = parser.parse_args()
 
     track_data = []
-    gmap_location = None
-
-    if args.gmap:
-        try:
-            gmap_location = google_maps_location(args.gmap)
-        except (OSError, URLError, TimeoutError, ValueError) as e:
-            print(f"Error resolving Google Maps link: {e}", file=sys.stderr)
-            return 1
 
     if args.file:
         try:
@@ -324,13 +235,13 @@ def main():
             print(f"Error reading from stdin: {e}", file=sys.stderr)
             sys.exit(1)
 
-    if not track_data and not gmap_location:
+    if not track_data or all(len(item["coordinates"]) == 0 for item in track_data):
         print("No valid coordinates found in the GPX data.", file=sys.stderr)
-        return 1
+        sys.exit(1)
 
-    html_output = generate_html(track_data, gmap_location)
+    html_output = generate_html(track_data)
     print(html_output)
-    return 0
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
+
