@@ -15,14 +15,58 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <style>
         #map { height: 100vh; width: 100%; }
         html, body { height: 100%; margin: 0; padding: 0; }
+        #legend {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: white;
+            padding: 12px 16px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 5;
+            border-radius: 6px;
+            max-width: 320px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        #legend h4 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .color-box {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .legend-text {
+            word-break: break-all;
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
+    <div id="legend">
+        <h4>GPX Tracks Legend</h4>
+        <div id="legend-content"></div>
+    </div>
     <script>
         function initMap() {
-            const allPaths = __PATHS__;
-            const defaultCenter = allPaths.length > 0 && allPaths[0].length > 0 ? allPaths[0][0] : {lat: 0, lng: 0};
+            const trackData = __TRACK_DATA__;
+            if (trackData.length === 0) return;
+
+            const defaultCenter = trackData[0].coordinates.length > 0 
+                ? trackData[0].coordinates[0] 
+                : {lat: 0, lng: 0};
             
             const mapOptions = {
                 zoom: 13,
@@ -30,19 +74,49 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             };
             const map = new google.maps.Map(document.getElementById("map"), mapOptions);
             
-            // Distinct colors for multiple tracks
-            const colors = ["#FF0000", "#0000FF", "#008000", "#FF8C00", "#800080", "#00FFFF", "#FF1493"];
+            // Distinct track colors
+            const colors = ["#E63946", "#1D3557", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261", "#D62828", "#6A040F"];
+            const legendContent = document.getElementById("legend-content");
             
-            allPaths.forEach((pathCoords, index) => {
-                if (pathCoords.length > 0) {
+            trackData.forEach((item, index) => {
+                const color = colors[index % colors.length];
+                const coords = item.coordinates;
+                
+                if (coords.length > 0) {
+                    // Draw Polyline for the track
                     const routePath = new google.maps.Polyline({
-                        path: pathCoords,
+                        path: coords,
                         geodesic: true,
-                        strokeColor: colors[index % colors.length],
-                        strokeOpacity: 1.0,
-                        strokeWeight: 3
+                        strokeColor: color,
+                        strokeOpacity: 0.9,
+                        strokeWeight: 4
                     });
                     routePath.setMap(map);
+                    
+                    // Add a red arrow marker at the starting point
+                    const startPoint = coords[0];
+                    new google.maps.Marker({
+                        position: startPoint,
+                        map: map,
+                        icon: {
+                            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                            scale: 6,
+                            fillColor: "#FF0000",
+                            fillOpacity: 1.0,
+                            strokeColor: "#990000",
+                            strokeWeight: 2
+                        },
+                        title: "Start: " + item.name
+                    });
+
+                    // Add entry to the map legend
+                    const legendItem = document.createElement("div");
+                    legendItem.className = "legend-item";
+                    legendItem.innerHTML = `
+                        <div class="color-box" style="background-color: ${color};"></div>
+                        <div class="legend-text" title="${item.name}">${item.name}</div>
+                    `;
+                    legendContent.appendChild(legendItem);
                 }
             });
         }
@@ -68,27 +142,27 @@ def parse_gpx_file(file_obj):
                 
     return coordinates
 
-def generate_html(paths):
+def generate_html(track_data):
     api_key = os.getenv("GOOGLE_MAPS_JS_API", "YOUR_API_KEY")
-    html = HTML_TEMPLATE.replace("__PATHS__", json.dumps(paths))
+    html = HTML_TEMPLATE.replace("__TRACK_DATA__", json.dumps(track_data))
     html = html.replace("__API_KEY__", api_key)
     return html
 
 def main():
-    parser = argparse.ArgumentParser(description="Parse GPX file(s) and generate an interactive Google Maps HTML page.")
+    parser = argparse.ArgumentParser(description="Parse GPX file(s) and generate an interactive Google Maps HTML page with markers and legend.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-f", "--file", help="Path to a single GPX file")
     group.add_argument("-r", "--read", help="Path to a text file containing a list of GPX file paths (one per line)")
     args = parser.parse_args()
 
-    paths = []
+    track_data = []
 
     if args.file:
         try:
             with open(args.file, "r", encoding="utf-8") as f:
                 coords = parse_gpx_file(f)
                 if coords:
-                    paths.append(coords)
+                    track_data.append({"name": os.path.basename(args.file), "coordinates": coords})
         except Exception as e:
             print(f"Error reading file {args.file}: {e}", file=sys.stderr)
             sys.exit(1)
@@ -104,7 +178,7 @@ def main():
                         with open(gpx_path, "r", encoding="utf-8") as g_file:
                             coords = parse_gpx_file(g_file)
                             if coords:
-                                paths.append(coords)
+                                track_data.append({"name": os.path.basename(gpx_path), "coordinates": coords})
                     except Exception as e:
                         print(f"Warning: Could not read GPX file '{gpx_path}': {e}", file=sys.stderr)
         except Exception as e:
@@ -115,16 +189,16 @@ def main():
         try:
             coords = parse_gpx_file(sys.stdin)
             if coords:
-                paths.append(coords)
+                track_data.append({"name": "stdin_route", "coordinates": coords})
         except Exception as e:
             print(f"Error reading from stdin: {e}", file=sys.stderr)
             sys.exit(1)
 
-    if not paths or all(len(p) == 0 for p in paths):
+    if not track_data or all(len(item["coordinates"]) == 0 for item in track_data):
         print("No valid coordinates found in the GPX data.", file=sys.stderr)
         sys.exit(1)
 
-    html_output = generate_html(paths)
+    html_output = generate_html(track_data)
     print(html_output)
 
 if __name__ == "__main__":
