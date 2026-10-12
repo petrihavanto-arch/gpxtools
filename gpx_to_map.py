@@ -26,19 +26,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
             z-index: 5;
             border-radius: 6px;
-            max-width: 320px;
+            max-width: 340px;
             max-height: 80vh;
             overflow-y: auto;
         }
         #legend h4 {
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
             font-size: 14px;
             color: #333;
+        }
+        .legend-subtitle {
+            font-size: 11px;
+            color: #770000;
+            margin-bottom: 8px;
+            font-style: italic;
         }
         .legend-item {
             display: flex;
             align-items: center;
             margin-bottom: 6px;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .legend-item:hover {
+            background-color: #f0f0f0;
         }
         .color-box {
             width: 16px;
@@ -57,6 +70,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div id="map"></div>
     <div id="legend">
         <h4>GPX Tracks Legend</h4>
+        <div class="legend-subtitle">Click item to highlight route</div>
         <div id="legend-content"></div>
     </div>
     <script>
@@ -77,6 +91,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             // Distinct track colors
             const colors = ["#E63946", "#1D3557", "#457B9D", "#2A9D8F", "#E9C46A", "#F4A261", "#D62828", "#6A040F"];
             const legendContent = document.getElementById("legend-content");
+            const polylines = [];
             
             trackData.forEach((item, index) => {
                 const color = colors[index % colors.length];
@@ -88,10 +103,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         path: coords,
                         geodesic: true,
                         strokeColor: color,
-                        strokeOpacity: 0.9,
-                        strokeWeight: 4
+                        strokeOpacity: 0.85,
+                        strokeWeight: 4,
+                        zIndex: 1
                     });
                     routePath.setMap(map);
+                    polylines.push(routePath);
                     
                     // Add a red arrow marker at the starting point
                     const startPoint = coords[0];
@@ -109,13 +126,37 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         title: "Start: " + item.name
                     });
 
-                    // Add entry to the map legend
+                    // Add entry to the map legend with click-to-highlight feature
                     const legendItem = document.createElement("div");
                     legendItem.className = "legend-item";
                     legendItem.innerHTML = `
                         <div class="color-box" style="background-color: ${color};"></div>
                         <div class="legend-text" title="${item.name}">${item.name}</div>
                     `;
+                    
+                    let isHighlighted = false;
+                    legendItem.addEventListener("click", () => {
+                        isHighlighted = !isHighlighted;
+                        
+                        if (isHighlighted) {
+                            // Dim all other lines, highlight this one
+                            polylines.forEach((line, idx) => {
+                                if (idx === index) {
+                                    line.setOptions({ strokeWeight: 7, strokeOpacity: 1.0, zIndex: 10 });
+                                } else {
+                                    line.setOptions({ strokeWeight: 2, strokeOpacity: 0.2, zIndex: 1 });
+                                }
+                            });
+                            legendItem.style.backgroundColor = "#e2e8f0";
+                        } else {
+                            // Reset all lines back to normal
+                            polylines.forEach((line) => {
+                                line.setOptions({ strokeWeight: 4, strokeOpacity: 0.85, zIndex: 1 });
+                            });
+                            legendItem.style.backgroundColor = "transparent";
+                        }
+                    });
+
                     legendContent.appendChild(legendItem);
                 }
             });
