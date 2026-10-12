@@ -142,7 +142,10 @@ def collect_json_coordinates(document):
                 add_coordinate_pair(points, keys[latitude_key], keys[longitude_key])
 
             for key, item in value.items():
-                if normalized_key(key) == "metrics" and isinstance(item, list) and descriptors:
+                normalized = normalized_key(key)
+                if normalized == "weather":
+                    continue
+                if normalized == "metrics" and isinstance(item, list) and descriptors:
                     visit_metric_rows(item, descriptors, points)
                 else:
                     visit(item)
@@ -199,7 +202,19 @@ def coordinates_from_gpx(document):
         if element.tag.rsplit("}", 1)[-1].casefold() not in {"trkpt", "rtept"}:
             continue
         add_coordinate_pair(points, element.get("lat"), element.get("lon"))
-    return points
+
+    activity_type = None
+    for element in root.iter():
+        if element.tag.rsplit("}", 1)[-1].casefold() not in {"trk", "rte"}:
+            continue
+        type_element = next(
+            (child for child in element if child.tag.rsplit("}", 1)[-1].casefold() == "type"),
+            None,
+        )
+        if type_element is not None and type_element.text and type_element.text.strip():
+            activity_type = type_element.text.strip()
+            break
+    return points, activity_type
 
 
 def coordinates_from_text(text, source_name):
@@ -207,15 +222,31 @@ def coordinates_from_text(text, source_name):
     if suffix == ".gpx":
         return coordinates_from_gpx(text)
     if suffix == ".json":
-        return collect_json_coordinates(json.loads(text))
+        document = json.loads(text)
+        points = collect_json_coordinates(document)
+        return points, activity_type_from_json(document)
 
     stripped = text.lstrip()
     if stripped.startswith("<"):
         return coordinates_from_gpx(text)
-    return collect_json_coordinates(json.loads(text))
+    document = json.loads(text)
+    points = collect_json_coordinates(document)
+    return points, activity_type_from_json(document)
 
 
-def bounds_record(name, points):
+def activity_type_from_json(document):
+    if not isinstance(document, dict):
+        return None
+    summary = document.get("summary")
+    if not isinstance(summary, dict):
+        return None
+    activity_type = summary.get("activityTypeDTO")
+    if not isinstance(activity_type, dict):
+        return None
+    return activity_type.get("typeKey")
+
+
+def bounds_record(name, points, activity_type=None):
     if not points:
         raise ValueError(f"No route coordinates found in {name}")
     latitudes, longitudes = zip(*points)
@@ -232,10 +263,20 @@ def bounds_record(name, points):
         east = circular_longitudes[largest_gap_index]
         west = (west + 180) % 360 - 180
         east = (east + 180) % 360 - 180
+    box_center_longitude = (west + ((east - west) % 360) / 2 + 180) % 360 - 180
     return {
         "name": name,
         "NW": {"latitude": max(latitudes), "longitude": west},
         "SE": {"latitude": min(latitudes), "longitude": east},
+        "box_center": {
+            "latitude": (max(latitudes) + min(latitudes)) / 2,
+            "longitude": box_center_longitude,
+        },
+        "weighed_center": {
+            "latitude": sum(latitudes) / len(latitudes),
+            "longitude": sum(longitudes) / len(longitudes),
+        },
+        "act": activity_type,
     }
 
 
@@ -245,8 +286,8 @@ def records_from_files(paths):
     for path in paths:
         try:
             text = decode_file(path.read_bytes())
-            points = coordinates_from_text(text, path.name)
-            records.append(bounds_record(path.name, points))
+            points, activity_type = coordinates_from_text(text, path.name)
+            records.append(bounds_record(path.name, points, activity_type))
             logging.debug("Read %d coordinates from %s", len(points), path)
         except (OSError, UnicodeError, ValueError, ET.ParseError, json.JSONDecodeError) as error:
             errors.append(f"{path}: {error}")
@@ -266,8 +307,8 @@ def main():
                 print(f"Error: skipping {error}", file=sys.stderr)
         else:
             text = read_stdin()
-            points = coordinates_from_text(text, "stdin")
-            records = [bounds_record("stdin", points)]
+            points, activity_type = coordinates_from_text(text, "stdin")
+            records = [bounds_record("stdin", points, activity_type)]
             errors = []
 
         output = json.dumps(records, ensure_ascii=False, indent=2)
