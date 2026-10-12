@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
 import gpxpy
 from dotenv import load_dotenv
 
@@ -189,12 +190,22 @@ def generate_html(track_data):
     html = html.replace("__API_KEY__", api_key)
     return html
 
-def main():
+def parse_args():
     parser = argparse.ArgumentParser(description="Parse GPX file(s) and generate an interactive Google Maps HTML page with markers and legend.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-f", "--file", help="Path to a single GPX file")
     group.add_argument("-r", "--read", help="Path to a text file containing a list of GPX file paths (one per line)")
+    parser.add_argument(
+        "-p", "--path", type=Path,
+        help="base directory for relative paths listed with --read (default: current directory)",
+    )
     args = parser.parse_args()
+    if args.path is not None and not args.read:
+        parser.error("-p/--path can only be used with -r/--read")
+    return args
+
+def main():
+    args = parse_args()
 
     track_data = []
 
@@ -212,14 +223,17 @@ def main():
         try:
             with open(args.read, "r", encoding="utf-8") as r_file:
                 for line in r_file:
-                    gpx_path = line.strip()
-                    if not gpx_path or gpx_path.startswith("#"):
+                    listed_path = line.strip()
+                    if not listed_path or listed_path.startswith("#"):
                         continue
+                    gpx_path = Path(listed_path)
+                    if not gpx_path.is_absolute():
+                        gpx_path = (args.path or Path.cwd()) / gpx_path
                     try:
                         with open(gpx_path, "r", encoding="utf-8") as g_file:
                             coords = parse_gpx_file(g_file)
                             if coords:
-                                track_data.append({"name": os.path.basename(gpx_path), "coordinates": coords})
+                                track_data.append({"name": gpx_path.name, "coordinates": coords})
                     except Exception as e:
                         print(f"Warning: Could not read GPX file '{gpx_path}': {e}", file=sys.stderr)
         except Exception as e:
@@ -244,4 +258,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
