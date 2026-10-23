@@ -1,0 +1,1992 @@
+{
+  "summary": {
+    "activityId": 3379853004,
+    "activityUUID": {
+      "uuid": "d5294626-7094-4b6e-bd10-54aba5a12916"
+    },
+    "activityName": "Skitour Schwendau",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 169,
+      "typeKey": "backcountry_skiing_snowboarding_ws",
+      "parentTypeId": 165,
+      "isHidden": false,
+      "restricted": true,
+      "trimmable": false
+    },
+    "eventTypeDTO": {
+      "typeId": 6,
+      "typeKey": "touring",
+      "sortOrder": 9
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 124,
+      "unitKey": "Europe/Paris",
+      "factor": 0.0,
+      "timeZone": "Europe/Paris"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 864073,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 2,
+        "formatKey": "gpx"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2019-02-13T14:46:58.0",
+      "uploadedDate": "2019-02-13T14:45:37.0",
+      "videoUrl": null,
+      "hasPolyline": true,
+      "hasChartData": true,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": null,
+      "activityImages": [],
+      "manufacturer": "",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": null,
+        "deviceTypePk": 19,
+        "deviceVersionPk": 864073
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "manualActivity": false,
+      "elevationCorrected": true,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "trimmed": false,
+      "runPowerWindDataEnabled": null,
+      "personalRecord": false,
+      "gcj02": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2012-05-01T10:00:00.0",
+      "startTimeGMT": "2012-05-01T08:00:00.0",
+      "startLatitude": 47.184448,
+      "startLongitude": 11.775069,
+      "distance": 3341.16,
+      "duration": 1848.0,
+      "movingDuration": 1815.0,
+      "elapsedDuration": 1848.0,
+      "elevationLoss": 683.41,
+      "maxElevation": 2395.72,
+      "minElevation": 1708.46,
+      "averageSpeed": 1.8079857020077454,
+      "averageMovingSpeed": 1.8408581693169772,
+      "maxSpeed": 4.948811610429704,
+      "endLatitude": 47.178848,
+      "endLongitude": 11.79554,
+      "maxVerticalSpeed": 0.1250332919034091
+    },
+    "locationName": "Schwendau"
+  },
+  "details": {
+    "activityId": 3379853004,
+    "measurementCount": 10,
+    "metricsCount": 58,
+    "totalMetricsCount": 58,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "directLongitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "directLatitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "directElevation",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 7,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 8,
+        "key": "directSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      },
+      {
+        "metricsIndex": 9,
+        "key": "directVerticalSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          11.775068985298276,
+          47.18444793485105,
+          2393.0,
+          1335859200000.0,
+          0.0,
+          0.0,
+          0.0,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          11.774854995310307,
+          47.18455094844103,
+          2398.0,
+          1335859233000.0,
+          33.0,
+          33.0,
+          33.0,
+          19.850000381469727,
+          0.6019999980926514,
+          0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.77467193454504,
+          47.184455981478095,
+          2397.0,
+          1335859266000.0,
+          66.0,
+          66.0,
+          66.0,
+          37.290000915527344,
+          0.527999997138977,
+          -0.029999999329447746
+        ]
+      },
+      {
+        "metrics": [
+          11.774221993982792,
+          47.184390937909484,
+          2395.0,
+          1335859299000.0,
+          99.0,
+          99.0,
+          99.0,
+          72.1500015258789,
+          1.055999994277954,
+          -0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.77383491769433,
+          47.18448598869145,
+          2389.0,
+          1335859332000.0,
+          132.0,
+          132.0,
+          132.0,
+          103.33000183105469,
+          0.9449999928474426,
+          -0.18199999630451202
+        ]
+      },
+      {
+        "metrics": [
+          11.773952934890985,
+          47.18470391817391,
+          2390.0,
+          1335859365000.0,
+          165.0,
+          165.0,
+          165.0,
+          129.16000366210938,
+          0.7829999923706055,
+          0.029999999329447746
+        ]
+      },
+      {
+        "metrics": [
+          11.773867942392826,
+          47.18498596921563,
+          2384.0,
+          1335859398000.0,
+          198.0,
+          198.0,
+          198.0,
+          161.1699981689453,
+          0.9700000286102295,
+          -0.18199999630451202
+        ]
+      },
+      {
+        "metrics": [
+          11.773931980133057,
+          47.1853519231081,
+          2367.0,
+          1335859431000.0,
+          231.0,
+          231.0,
+          231.0,
+          202.14999389648438,
+          1.2419999837875366,
+          -0.5149999856948853
+        ]
+      },
+      {
+        "metrics": [
+          11.773781944066286,
+          47.18544797971845,
+          2362.0,
+          1335859464000.0,
+          264.0,
+          264.0,
+          264.0,
+          217.74000549316406,
+          0.4729999899864197,
+          -0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.773781944066286,
+          47.185637997463346,
+          2360.0,
+          1335859497000.0,
+          297.0,
+          297.0,
+          297.0,
+          238.86000061035156,
+          0.6399999856948853,
+          -0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.773813962936401,
+          47.18588593415916,
+          2353.0,
+          1335859530000.0,
+          330.0,
+          330.0,
+          330.0,
+          266.5400085449219,
+          0.8389999866485596,
+          -0.21199999749660492
+        ]
+      },
+      {
+        "metrics": [
+          11.773985959589481,
+          47.186152981594205,
+          2351.0,
+          1335859563000.0,
+          363.0,
+          363.0,
+          363.0,
+          298.9599914550781,
+          0.9819999933242798,
+          -0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.773995934054255,
+          47.18631399795413,
+          2349.0,
+          1335859596000.0,
+          396.0,
+          396.0,
+          396.0,
+          316.8800048828125,
+          0.5429999828338623,
+          -0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.77349193021655,
+          47.18687399290502,
+          2339.0,
+          1335859629000.0,
+          429.0,
+          429.0,
+          429.0,
+          389.9200134277344,
+          2.2130000591278076,
+          -0.30300000309944153
+        ]
+      },
+      {
+        "metrics": [
+          11.773180961608887,
+          47.18736995011568,
+          2323.0,
+          1335859662000.0,
+          462.0,
+          462.0,
+          462.0,
+          449.8900146484375,
+          1.8170000314712524,
+          -0.48500001430511475
+        ]
+      },
+      {
+        "metrics": [
+          11.773019945248961,
+          47.187785943970084,
+          2307.0,
+          1335859695000.0,
+          495.0,
+          495.0,
+          495.0,
+          497.7200012207031,
+          1.4490000009536743,
+          -0.48500001430511475
+        ]
+      },
+      {
+        "metrics": [
+          11.773126982152462,
+          47.18855297192931,
+          2283.0,
+          1335859728000.0,
+          528.0,
+          528.0,
+          528.0,
+          583.3699951171875,
+          2.5959999561309814,
+          -0.7269999980926514
+        ]
+      },
+      {
+        "metrics": [
+          11.773008964955807,
+          47.188777942210436,
+          2274.0,
+          1335859761000.0,
+          561.0,
+          561.0,
+          561.0,
+          609.9400024414062,
+          0.8050000071525574,
+          -0.27300000190734863
+        ]
+      },
+      {
+        "metrics": [
+          11.773169981315732,
+          47.1892009768635,
+          2261.0,
+          1335859794000.0,
+          594.0,
+          594.0,
+          594.0,
+          658.52001953125,
+          1.472000002861023,
+          -0.39399999380111694
+        ]
+      },
+      {
+        "metrics": [
+          11.773931980133057,
+          47.18957497738302,
+          2246.0,
+          1335859827000.0,
+          627.0,
+          627.0,
+          627.0,
+          729.6799926757812,
+          2.1559998989105225,
+          -0.45500001311302185
+        ]
+      },
+      {
+        "metrics": [
+          11.77561598829925,
+          47.189998934045434,
+          2224.0,
+          1335859860000.0,
+          660.0,
+          660.0,
+          660.0,
+          865.72998046875,
+          4.123000144958496,
+          -0.6669999957084656
+        ]
+      },
+      {
+        "metrics": [
+          11.77673195488751,
+          47.190535962581635,
+          2192.0,
+          1335859893000.0,
+          693.0,
+          693.0,
+          693.0,
+          969.260009765625,
+          3.13700008392334,
+          -0.9700000286102295
+        ]
+      },
+      {
+        "metrics": [
+          11.777128921821713,
+          47.19088699668646,
+          2178.0,
+          1335859926000.0,
+          726.0,
+          726.0,
+          726.0,
+          1018.530029296875,
+          1.4930000305175781,
+          -0.42399999499320984
+        ]
+      },
+      {
+        "metrics": [
+          11.777997957542539,
+          47.19125697389245,
+          2154.0,
+          1335859959000.0,
+          759.0,
+          759.0,
+          759.0,
+          1096.1800537109375,
+          2.3529999256134033,
+          -0.7269999980926514
+        ]
+      },
+      {
+        "metrics": [
+          11.779531929641962,
+          47.19179199077189,
+          2123.0,
+          1335859992000.0,
+          792.0,
+          792.0,
+          792.0,
+          1226.760009765625,
+          3.9570000171661377,
+          -0.9390000104904175
+        ]
+      },
+      {
+        "metrics": [
+          11.779961921274662,
+          47.19189793802798,
+          2114.0,
+          1335860025000.0,
+          825.0,
+          825.0,
+          825.0,
+          1261.4200439453125,
+          1.0499999523162842,
+          -0.27300000190734863
+        ]
+      },
+      {
+        "metrics": [
+          11.781924962997437,
+          47.191848987713456,
+          2070.0,
+          1335860058000.0,
+          858.0,
+          858.0,
+          858.0,
+          1410.280029296875,
+          4.511000156402588,
+          -1.3329999446868896
+        ]
+      },
+      {
+        "metrics": [
+          11.782203996554017,
+          47.19173792749643,
+          2063.0,
+          1335860091000.0,
+          891.0,
+          891.0,
+          891.0,
+          1434.760009765625,
+          0.7419999837875366,
+          -0.21199999749660492
+        ]
+      },
+      {
+        "metrics": [
+          11.782729960978031,
+          47.191310953348875,
+          2048.0,
+          1335860124000.0,
+          924.0,
+          924.0,
+          924.0,
+          1496.75,
+          1.878000020980835,
+          -0.45500001311302185
+        ]
+      },
+      {
+        "metrics": [
+          11.78302994929254,
+          47.190879955887794,
+          2038.0,
+          1335860157000.0,
+          957.0,
+          957.0,
+          957.0,
+          1549.780029296875,
+          1.6069999933242798,
+          -0.30300000309944153
+        ]
+      },
+      {
+        "metrics": [
+          11.783394981175661,
+          47.19073494896293,
+          2027.0,
+          1335860190000.0,
+          990.0,
+          990.0,
+          990.0,
+          1581.800048828125,
+          0.9700000286102295,
+          -0.3330000042915344
+        ]
+      },
+      {
+        "metrics": [
+          11.78369496949017,
+          47.1904409956187,
+          2015.0,
+          1335860223000.0,
+          1023.0,
+          1023.0,
+          1023.0,
+          1621.6199951171875,
+          1.2070000171661377,
+          -0.36399999260902405
+        ]
+      },
+      {
+        "metrics": [
+          11.78395296446979,
+          47.19007093459368,
+          1999.0,
+          1335860256000.0,
+          1056.0,
+          1056.0,
+          1056.0,
+          1667.1600341796875,
+          1.3799999952316284,
+          -0.48500001430511475
+        ]
+      },
+      {
+        "metrics": [
+          11.784113980829716,
+          47.18962493352592,
+          1986.0,
+          1335860289000.0,
+          1089.0,
+          1089.0,
+          1089.0,
+          1718.219970703125,
+          1.5470000505447388,
+          -0.39399999380111694
+        ]
+      },
+      {
+        "metrics": [
+          11.78410291671753,
+          47.18888891860843,
+          1978.0,
+          1335860322000.0,
+          1122.0,
+          1122.0,
+          1122.0,
+          1800.050048828125,
+          2.4800000190734863,
+          -0.24199999868869781
+        ]
+      },
+      {
+        "metrics": [
+          11.7842529527843,
+          47.188559928908944,
+          1972.0,
+          1335860355000.0,
+          1155.0,
+          1155.0,
+          1155.0,
+          1838.3499755859375,
+          1.1610000133514404,
+          -0.18199999630451202
+        ]
+      },
+      {
+        "metrics": [
+          11.784606920555234,
+          47.18711094930768,
+          1951.0,
+          1335860388000.0,
+          1188.0,
+          1188.0,
+          1188.0,
+          2001.6700439453125,
+          4.948999881744385,
+          -0.6359999775886536
+        ]
+      },
+      {
+        "metrics": [
+          11.78489693440497,
+          47.186648938804865,
+          1941.0,
+          1335860421000.0,
+          1221.0,
+          1221.0,
+          1221.0,
+          2057.530029296875,
+          1.6929999589920044,
+          -0.30300000309944153
+        ]
+      },
+      {
+        "metrics": [
+          11.78551895543933,
+          47.18610394746065,
+          1919.0,
+          1335860454000.0,
+          1254.0,
+          1254.0,
+          1254.0,
+          2134.300048828125,
+          2.3259999752044678,
+          -0.6669999957084656
+        ]
+      },
+      {
+        "metrics": [
+          11.785904942080379,
+          47.18507397919893,
+          1888.0,
+          1335860487000.0,
+          1287.0,
+          1287.0,
+          1287.0,
+          2252.489990234375,
+          3.5810000896453857,
+          -0.9390000104904175
+        ]
+      },
+      {
+        "metrics": [
+          11.786151956766844,
+          47.18481397256255,
+          1875.0,
+          1335860520000.0,
+          1320.0,
+          1320.0,
+          1320.0,
+          2286.929931640625,
+          1.0440000295639038,
+          -0.39399999380111694
+        ]
+      },
+      {
+        "metrics": [
+          11.786559987813234,
+          47.18344093300402,
+          1842.0,
+          1335860553000.0,
+          1353.0,
+          1353.0,
+          1353.0,
+          2442.669921875,
+          4.71999979019165,
+          -1.0
+        ]
+      },
+      {
+        "metrics": [
+          11.787428939715028,
+          47.18227392062545,
+          1805.0,
+          1335860586000.0,
+          1386.0,
+          1386.0,
+          1386.0,
+          2588.179931640625,
+          4.408999919891357,
+          -1.121000051498413
+        ]
+      },
+      {
+        "metrics": [
+          11.787439920008183,
+          47.18220896087587,
+          1806.0,
+          1335860619000.0,
+          1419.0,
+          1419.0,
+          1386.0,
+          2595.449951171875,
+          0.2199999988079071,
+          0.029999999329447746
+        ]
+      },
+      {
+        "metrics": [
+          11.787310922518373,
+          47.1821519639343,
+          1808.0,
+          1335860652000.0,
+          1452.0,
+          1452.0,
+          1419.0,
+          2607.10009765625,
+          0.3529999852180481,
+          0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.787567995488644,
+          47.18184996396303,
+          1800.0,
+          1335860685000.0,
+          1485.0,
+          1485.0,
+          1452.0,
+          2645.919921875,
+          1.1759999990463257,
+          -0.24199999868869781
+        ]
+      },
+      {
+        "metrics": [
+          11.787610994651914,
+          47.18163295648992,
+          1799.0,
+          1335860718000.0,
+          1518.0,
+          1518.0,
+          1485.0,
+          2670.260009765625,
+          0.7379999756813049,
+          -0.029999999329447746
+        ]
+      },
+      {
+        "metrics": [
+          11.787900924682617,
+          47.18121696263552,
+          1794.0,
+          1335860751000.0,
+          1551.0,
+          1551.0,
+          1518.0,
+          2721.469970703125,
+          1.5520000457763672,
+          -0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.787879969924688,
+          47.18110699206591,
+          1792.0,
+          1335860784000.0,
+          1584.0,
+          1584.0,
+          1551.0,
+          2733.800048828125,
+          0.37400001287460327,
+          -0.061000000685453415
+        ]
+      },
+      {
+        "metrics": [
+          11.787739992141724,
+          47.18103398568928,
+          1797.0,
+          1335860817000.0,
+          1617.0,
+          1617.0,
+          1584.0,
+          2747.159912109375,
+          0.4050000011920929,
+          0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.789187965914607,
+          47.18031297437847,
+          1755.0,
+          1335860850000.0,
+          1650.0,
+          1650.0,
+          1617.0,
+          2883.070068359375,
+          4.11899995803833,
+          -1.2730000019073486
+        ]
+      },
+      {
+        "metrics": [
+          11.791011951863766,
+          47.17964896000922,
+          1729.0,
+          1335860883000.0,
+          1683.0,
+          1683.0,
+          1650.0,
+          3039.81005859375,
+          4.749000072479248,
+          -0.7879999876022339
+        ]
+      },
+      {
+        "metrics": [
+          11.7913659196347,
+          47.179233971983194,
+          1724.0,
+          1335860916000.0,
+          1716.0,
+          1716.0,
+          1683.0,
+          3093.179931640625,
+          1.6169999837875366,
+          -0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.791709996759892,
+          47.17916096560657,
+          1723.0,
+          1335860949000.0,
+          1749.0,
+          1749.0,
+          1716.0,
+          3120.489990234375,
+          0.828000009059906,
+          -0.029999999329447746
+        ]
+      },
+      {
+        "metrics": [
+          11.79226798005402,
+          47.17916892841458,
+          1718.0,
+          1335860982000.0,
+          1782.0,
+          1782.0,
+          1749.0,
+          3162.7900390625,
+          1.281999945640564,
+          -0.15199999511241913
+        ]
+      },
+      {
+        "metrics": [
+          11.793264923617244,
+          47.17894395813346,
+          1715.0,
+          1335861015000.0,
+          1815.0,
+          1815.0,
+          1782.0,
+          3242.39990234375,
+          2.4119999408721924,
+          -0.09099999815225601
+        ]
+      },
+      {
+        "metrics": [
+          11.79454199038446,
+          47.17876793816686,
+          1708.0,
+          1335861048000.0,
+          1848.0,
+          1848.0,
+          1815.0,
+          3341.159912109375,
+          2.993000030517578,
+          -0.21199999749660492
+        ]
+      },
+      {
+        "metrics": [
+          11.795539939776063,
+          47.178847985342145,
+          1702.0,
+          1335861081000.0,
+          1881.0,
+          1881.0,
+          1848.0,
+          3417.330078125,
+          2.308000087738037,
+          -0.18199999630451202
+        ]
+      }
+    ],
+    "geoPolylineDTO": {
+      "startPoint": {
+        "lat": 47.18444793485105,
+        "lon": 11.775068985298276,
+        "altitude": null,
+        "time": 1335859200000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "endPoint": {
+        "lat": 47.178847985342145,
+        "lon": 11.795539939776063,
+        "altitude": null,
+        "time": 1335861081000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "minLat": 47.17876793816686,
+      "maxLat": 47.19189793802798,
+      "minLon": 11.773008964955807,
+      "maxLon": 11.795539939776063,
+      "polyline": [
+        {
+          "lat": 47.18444793485105,
+          "lon": 11.775068985298276,
+          "altitude": null,
+          "time": 1335859200000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18455094844103,
+          "lon": 11.774854995310307,
+          "altitude": null,
+          "time": 1335859233000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.184455981478095,
+          "lon": 11.77467193454504,
+          "altitude": null,
+          "time": 1335859266000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.184390937909484,
+          "lon": 11.774221993982792,
+          "altitude": null,
+          "time": 1335859299000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18448598869145,
+          "lon": 11.77383491769433,
+          "altitude": null,
+          "time": 1335859332000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18470391817391,
+          "lon": 11.773952934890985,
+          "altitude": null,
+          "time": 1335859365000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18498596921563,
+          "lon": 11.773867942392826,
+          "altitude": null,
+          "time": 1335859398000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.1853519231081,
+          "lon": 11.773931980133057,
+          "altitude": null,
+          "time": 1335859431000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18544797971845,
+          "lon": 11.773781944066286,
+          "altitude": null,
+          "time": 1335859464000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.185637997463346,
+          "lon": 11.773781944066286,
+          "altitude": null,
+          "time": 1335859497000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18588593415916,
+          "lon": 11.773813962936401,
+          "altitude": null,
+          "time": 1335859530000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.186152981594205,
+          "lon": 11.773985959589481,
+          "altitude": null,
+          "time": 1335859563000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18631399795413,
+          "lon": 11.773995934054255,
+          "altitude": null,
+          "time": 1335859596000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18687399290502,
+          "lon": 11.77349193021655,
+          "altitude": null,
+          "time": 1335859629000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18736995011568,
+          "lon": 11.773180961608887,
+          "altitude": null,
+          "time": 1335859662000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.187785943970084,
+          "lon": 11.773019945248961,
+          "altitude": null,
+          "time": 1335859695000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18855297192931,
+          "lon": 11.773126982152462,
+          "altitude": null,
+          "time": 1335859728000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.188777942210436,
+          "lon": 11.773008964955807,
+          "altitude": null,
+          "time": 1335859761000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.1892009768635,
+          "lon": 11.773169981315732,
+          "altitude": null,
+          "time": 1335859794000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18957497738302,
+          "lon": 11.773931980133057,
+          "altitude": null,
+          "time": 1335859827000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.189998934045434,
+          "lon": 11.77561598829925,
+          "altitude": null,
+          "time": 1335859860000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.190535962581635,
+          "lon": 11.77673195488751,
+          "altitude": null,
+          "time": 1335859893000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19088699668646,
+          "lon": 11.777128921821713,
+          "altitude": null,
+          "time": 1335859926000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19125697389245,
+          "lon": 11.777997957542539,
+          "altitude": null,
+          "time": 1335859959000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19179199077189,
+          "lon": 11.779531929641962,
+          "altitude": null,
+          "time": 1335859992000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19189793802798,
+          "lon": 11.779961921274662,
+          "altitude": null,
+          "time": 1335860025000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.191848987713456,
+          "lon": 11.781924962997437,
+          "altitude": null,
+          "time": 1335860058000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19173792749643,
+          "lon": 11.782203996554017,
+          "altitude": null,
+          "time": 1335860091000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.191310953348875,
+          "lon": 11.782729960978031,
+          "altitude": null,
+          "time": 1335860124000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.190879955887794,
+          "lon": 11.78302994929254,
+          "altitude": null,
+          "time": 1335860157000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19073494896293,
+          "lon": 11.783394981175661,
+          "altitude": null,
+          "time": 1335860190000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.1904409956187,
+          "lon": 11.78369496949017,
+          "altitude": null,
+          "time": 1335860223000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.19007093459368,
+          "lon": 11.78395296446979,
+          "altitude": null,
+          "time": 1335860256000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18962493352592,
+          "lon": 11.784113980829716,
+          "altitude": null,
+          "time": 1335860289000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18888891860843,
+          "lon": 11.78410291671753,
+          "altitude": null,
+          "time": 1335860322000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.188559928908944,
+          "lon": 11.7842529527843,
+          "altitude": null,
+          "time": 1335860355000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18711094930768,
+          "lon": 11.784606920555234,
+          "altitude": null,
+          "time": 1335860388000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.186648938804865,
+          "lon": 11.78489693440497,
+          "altitude": null,
+          "time": 1335860421000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18610394746065,
+          "lon": 11.78551895543933,
+          "altitude": null,
+          "time": 1335860454000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18507397919893,
+          "lon": 11.785904942080379,
+          "altitude": null,
+          "time": 1335860487000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18481397256255,
+          "lon": 11.786151956766844,
+          "altitude": null,
+          "time": 1335860520000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18344093300402,
+          "lon": 11.786559987813234,
+          "altitude": null,
+          "time": 1335860553000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18227392062545,
+          "lon": 11.787428939715028,
+          "altitude": null,
+          "time": 1335860586000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18220896087587,
+          "lon": 11.787439920008183,
+          "altitude": null,
+          "time": 1335860619000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.1821519639343,
+          "lon": 11.787310922518373,
+          "altitude": null,
+          "time": 1335860652000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18184996396303,
+          "lon": 11.787567995488644,
+          "altitude": null,
+          "time": 1335860685000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18163295648992,
+          "lon": 11.787610994651914,
+          "altitude": null,
+          "time": 1335860718000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18121696263552,
+          "lon": 11.787900924682617,
+          "altitude": null,
+          "time": 1335860751000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18110699206591,
+          "lon": 11.787879969924688,
+          "altitude": null,
+          "time": 1335860784000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18103398568928,
+          "lon": 11.787739992141724,
+          "altitude": null,
+          "time": 1335860817000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.18031297437847,
+          "lon": 11.789187965914607,
+          "altitude": null,
+          "time": 1335860850000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.17964896000922,
+          "lon": 11.791011951863766,
+          "altitude": null,
+          "time": 1335860883000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.179233971983194,
+          "lon": 11.7913659196347,
+          "altitude": null,
+          "time": 1335860916000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.17916096560657,
+          "lon": 11.791709996759892,
+          "altitude": null,
+          "time": 1335860949000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.17916892841458,
+          "lon": 11.79226798005402,
+          "altitude": null,
+          "time": 1335860982000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.17894395813346,
+          "lon": 11.793264923617244,
+          "altitude": null,
+          "time": 1335861015000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.17876793816686,
+          "lon": 11.79454199038446,
+          "altitude": null,
+          "time": 1335861048000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 47.178847985342145,
+          "lon": 11.795539939776063,
+          "altitude": null,
+          "time": 1335861081000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        }
+      ]
+    },
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 3379853004,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2012-05-01T08:00:00.0",
+        "startLatitude": 47.184448,
+        "startLongitude": 11.775069,
+        "distance": 3341.16,
+        "duration": 1848.0,
+        "movingDuration": 1815.0,
+        "elapsedDuration": 1848.0,
+        "elevationLoss": 683.41,
+        "maxElevation": 2395.72,
+        "minElevation": 1708.46,
+        "averageSpeed": 1.8079857020077454,
+        "averageMovingSpeed": 1.8408581693169772,
+        "maxSpeed": 4.948811610429704,
+        "endLatitude": 47.178848,
+        "endLongitude": 11.79554,
+        "maxVerticalSpeed": 0.1250332919034091,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": []
+  },
+  "split_summaries": {
+    "activityId": 3379853004,
+    "activityUUID": {
+      "uuid": "d5294626-7094-4b6e-bd10-54aba5a12916"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 3379853004,
+    "exerciseSets": null
+  }
+}

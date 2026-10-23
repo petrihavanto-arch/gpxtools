@@ -1,0 +1,345 @@
+{
+  "summary": {
+    "activityId": 3196786062,
+    "activityUUID": {
+      "uuid": "40daff31-7b9f-4bd6-b068-ac1e470771c3"
+    },
+    "activityName": "Cycling",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 2,
+      "typeKey": "cycling",
+      "parentTypeId": 17,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 845752,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2018-12-01T11:29:12.0",
+      "uploadedDate": "2018-12-01T11:29:12.0",
+      "videoUrl": null,
+      "hasPolyline": false,
+      "hasChartData": true,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3906703416",
+        "deviceTypePk": 21600,
+        "deviceVersionPk": 845752
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "autoCalcCalories": false,
+      "favorite": false,
+      "runPowerWindDataEnabled": null,
+      "manualActivity": false,
+      "elevationCorrected": false,
+      "trimmed": false,
+      "personalRecord": false,
+      "gcj02": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2018-12-01T13:03:51.0",
+      "startTimeGMT": "2018-12-01T11:03:51.0",
+      "distance": 0.0,
+      "duration": 4.676,
+      "movingDuration": 0.0,
+      "elapsedDuration": 4.676,
+      "elevationGain": 0.0,
+      "elevationLoss": 0.0,
+      "maxElevation": 1.8,
+      "minElevation": 1.8,
+      "averageSpeed": 0.0,
+      "calories": 0.0,
+      "averageTemperature": 22.0,
+      "maxTemperature": 22.0,
+      "minTemperature": 22.0,
+      "maxVerticalSpeed": 0.0
+    },
+    "locationName": ""
+  },
+  "details": {
+    "activityId": 3196786062,
+    "measurementCount": 8,
+    "metricsCount": 6,
+    "totalMetricsCount": 6,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "directAirTemperature",
+        "unit": {
+          "id": 227,
+          "key": "celcius",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "directElevation",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 7,
+        "key": "directVerticalSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          22.0,
+          0.0,
+          1.7999999523162842,
+          0.0,
+          0.0,
+          1543662231000.0,
+          0.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          0.0,
+          1543662232000.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          2.0,
+          1.7999999523162842,
+          2.0,
+          0.0,
+          1543662233000.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          3.0,
+          1.7999999523162842,
+          3.0,
+          0.0,
+          1543662234000.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          4.0,
+          1.7999999523162842,
+          4.0,
+          0.0,
+          1543662235000.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          5.0,
+          1.7999999523162842,
+          5.0,
+          0.0,
+          1543662236000.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 3196786062,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2018-12-01T11:03:51.0",
+        "distance": 0.0,
+        "duration": 4.676,
+        "movingDuration": 0.0,
+        "elapsedDuration": 4.0,
+        "elevationGain": 0.0,
+        "elevationLoss": 0.0,
+        "maxElevation": 1.8,
+        "minElevation": 1.8,
+        "averageSpeed": 0.0,
+        "calories": 0.0,
+        "averageTemperature": 22.0,
+        "maxTemperature": 22.0,
+        "minTemperature": 22.0,
+        "maxVerticalSpeed": 0.0,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2018-12-01T11:03:51.0",
+        "startTimeGMTDoubleValue": 1543662231000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2018-12-01T11:03:56.0",
+        "startTimeGMTDoubleValue": 1543662236000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 3196786062,
+    "activityUUID": {
+      "uuid": "40daff31-7b9f-4bd6-b068-ac1e470771c3"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 3196786062,
+    "exerciseSets": null
+  }
+}

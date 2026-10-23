@@ -1,0 +1,2270 @@
+{
+  "summary": {
+    "activityId": 23875994880,
+    "activityUUID": {
+      "uuid": "9ca54797-4ccf-49a2-96e6-d1fd59b718a9"
+    },
+    "activityName": "Strength",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 13,
+      "typeKey": "strength_training",
+      "parentTypeId": 29,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": false
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 918087,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2026-08-06T15:00:37.0",
+      "uploadedDate": "2026-08-06T15:00:37.0",
+      "videoUrl": null,
+      "hasPolyline": false,
+      "hasChartData": true,
+      "hasHrTimeInZones": true,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": null,
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3977950930",
+        "deviceTypePk": 34978,
+        "deviceVersionPk": 918087
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "sessionResultType": "ORIGINAL",
+      "hasMultiDayActivities": false,
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "trimmed": false,
+      "elevationCorrected": false,
+      "manualActivity": false,
+      "autoCalcCalories": false,
+      "favorite": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2026-08-06T17:18:32.0",
+      "startTimeGMT": "2026-08-06T14:18:32.0",
+      "distance": 0.0,
+      "duration": 682.25,
+      "movingDuration": 351.312,
+      "elapsedDuration": 682.25,
+      "averageSpeed": 0.0,
+      "averageMovingSpeed": 0.0,
+      "calories": 2.0,
+      "averageHR": 80.0,
+      "maxHR": 94.0,
+      "minHR": 59.0,
+      "averageTemperature": 24.008797653958943,
+      "maxTemperature": 26.0,
+      "minTemperature": 22.0,
+      "trainingEffect": 0.20000000298023224,
+      "anaerobicTrainingEffect": 0.0,
+      "aerobicTrainingEffectMessage": "NO_AEROBIC_BENEFIT_18",
+      "anaerobicTrainingEffectMessage": "NO_ANAEROBIC_BENEFIT_0",
+      "totalExerciseReps": 10,
+      "activeSets": 5,
+      "minActivityLapDuration": 682.25,
+      "steps": 20
+    }
+  },
+  "details": {
+    "activityId": 23875994880,
+    "measurementCount": 7,
+    "metricsCount": 144,
+    "totalMetricsCount": 144,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "directAirTemperature",
+        "unit": {
+          "id": 227,
+          "key": "celcius",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "directHeartRate",
+        "unit": {
+          "id": 100,
+          "key": "bpm",
+          "factor": 1.0
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          0.0,
+          1786025912000.0,
+          0.0,
+          0.0,
+          0.0,
+          26.0,
+          74.0
+        ]
+      },
+      {
+        "metrics": [
+          1.0,
+          1786025913000.0,
+          0.0,
+          1.0,
+          0.0,
+          26.0,
+          74.0
+        ]
+      },
+      {
+        "metrics": [
+          3.0,
+          1786025915000.0,
+          0.0,
+          3.0,
+          0.0,
+          26.0,
+          76.0
+        ]
+      },
+      {
+        "metrics": [
+          4.0,
+          1786025916000.0,
+          0.0,
+          4.0,
+          0.0,
+          26.0,
+          73.0
+        ]
+      },
+      {
+        "metrics": [
+          5.0,
+          1786025917000.0,
+          0.0,
+          5.0,
+          0.0,
+          26.0,
+          75.0
+        ]
+      },
+      {
+        "metrics": [
+          7.0,
+          1786025919000.0,
+          0.0,
+          7.0,
+          0.0,
+          26.0,
+          74.0
+        ]
+      },
+      {
+        "metrics": [
+          8.0,
+          1786025920000.0,
+          0.0,
+          8.0,
+          0.0,
+          26.0,
+          73.0
+        ]
+      },
+      {
+        "metrics": [
+          13.0,
+          1786025925000.0,
+          0.0,
+          13.0,
+          0.0,
+          26.0,
+          72.0
+        ]
+      },
+      {
+        "metrics": [
+          14.0,
+          1786025926000.0,
+          0.0,
+          14.0,
+          0.0,
+          26.0,
+          74.0
+        ]
+      },
+      {
+        "metrics": [
+          16.0,
+          1786025928000.0,
+          0.0,
+          16.0,
+          0.0,
+          26.0,
+          73.0
+        ]
+      },
+      {
+        "metrics": [
+          17.0,
+          1786025929000.0,
+          0.0,
+          17.0,
+          0.0,
+          26.0,
+          74.0
+        ]
+      },
+      {
+        "metrics": [
+          20.0,
+          1786025932000.0,
+          0.0,
+          20.0,
+          0.0,
+          26.0,
+          76.0
+        ]
+      },
+      {
+        "metrics": [
+          21.0,
+          1786025933000.0,
+          0.0,
+          21.0,
+          0.0,
+          26.0,
+          75.0
+        ]
+      },
+      {
+        "metrics": [
+          22.0,
+          1786025934000.0,
+          0.0,
+          22.0,
+          0.0,
+          26.0,
+          79.0
+        ]
+      },
+      {
+        "metrics": [
+          23.0,
+          1786025935000.0,
+          0.0,
+          23.0,
+          0.0,
+          26.0,
+          81.0
+        ]
+      },
+      {
+        "metrics": [
+          24.0,
+          1786025936000.0,
+          0.0,
+          24.0,
+          0.0,
+          26.0,
+          84.0
+        ]
+      },
+      {
+        "metrics": [
+          25.0,
+          1786025937000.0,
+          0.0,
+          25.0,
+          0.0,
+          26.0,
+          84.0
+        ]
+      },
+      {
+        "metrics": [
+          26.0,
+          1786025938000.0,
+          0.0,
+          26.0,
+          0.0,
+          26.0,
+          86.0
+        ]
+      },
+      {
+        "metrics": [
+          28.0,
+          1786025940000.0,
+          0.0,
+          28.0,
+          0.0,
+          26.0,
+          87.0
+        ]
+      },
+      {
+        "metrics": [
+          31.0,
+          1786025943000.0,
+          0.0,
+          31.0,
+          0.0,
+          26.0,
+          89.0
+        ]
+      },
+      {
+        "metrics": [
+          32.0,
+          1786025944000.0,
+          0.0,
+          32.0,
+          0.0,
+          26.0,
+          90.0
+        ]
+      },
+      {
+        "metrics": [
+          34.0,
+          1786025946000.0,
+          0.0,
+          34.0,
+          0.0,
+          26.0,
+          92.0
+        ]
+      },
+      {
+        "metrics": [
+          35.0,
+          1786025947000.0,
+          0.0,
+          35.0,
+          0.0,
+          26.0,
+          93.0
+        ]
+      },
+      {
+        "metrics": [
+          36.0,
+          1786025948000.0,
+          0.0,
+          36.0,
+          0.0,
+          26.0,
+          94.0
+        ]
+      },
+      {
+        "metrics": [
+          37.0,
+          1786025949000.0,
+          0.0,
+          37.0,
+          0.0,
+          26.0,
+          93.0
+        ]
+      },
+      {
+        "metrics": [
+          38.0,
+          1786025950000.0,
+          0.0,
+          38.0,
+          0.0,
+          26.0,
+          94.0
+        ]
+      },
+      {
+        "metrics": [
+          39.0,
+          1786025951000.0,
+          0.0,
+          39.0,
+          0.0,
+          26.0,
+          93.0
+        ]
+      },
+      {
+        "metrics": [
+          40.0,
+          1786025952000.0,
+          0.0,
+          40.0,
+          0.0,
+          26.0,
+          94.0
+        ]
+      },
+      {
+        "metrics": [
+          41.0,
+          1786025953000.0,
+          0.0,
+          41.0,
+          0.0,
+          26.0,
+          92.0
+        ]
+      },
+      {
+        "metrics": [
+          47.0,
+          1786025959000.0,
+          0.0,
+          47.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          53.0,
+          1786025965000.0,
+          0.0,
+          53.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          59.0,
+          1786025971000.0,
+          0.0,
+          59.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          65.0,
+          1786025977000.0,
+          0.0,
+          65.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          71.0,
+          1786025983000.0,
+          0.0,
+          71.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          77.0,
+          1786025989000.0,
+          0.0,
+          77.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          79.0,
+          1786025991000.0,
+          0.0,
+          79.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          85.0,
+          1786025997000.0,
+          0.0,
+          85.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          91.0,
+          1786026003000.0,
+          0.0,
+          91.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          97.0,
+          1786026009000.0,
+          0.0,
+          97.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          103.0,
+          1786026015000.0,
+          0.0,
+          103.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          109.0,
+          1786026021000.0,
+          0.0,
+          109.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          115.0,
+          1786026027000.0,
+          0.0,
+          115.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          121.0,
+          1786026033000.0,
+          0.0,
+          121.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          127.0,
+          1786026039000.0,
+          0.0,
+          127.0,
+          0.0,
+          26.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          133.0,
+          1786026045000.0,
+          0.0,
+          133.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          139.0,
+          1786026051000.0,
+          0.0,
+          139.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          145.0,
+          1786026057000.0,
+          0.0,
+          145.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          150.0,
+          1786026062000.0,
+          0.0,
+          150.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          156.0,
+          1786026068000.0,
+          0.0,
+          156.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          161.0,
+          1786026073000.0,
+          0.0,
+          161.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          167.0,
+          1786026079000.0,
+          0.0,
+          167.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          173.0,
+          1786026085000.0,
+          0.0,
+          173.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          179.0,
+          1786026091000.0,
+          0.0,
+          179.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          185.0,
+          1786026097000.0,
+          0.0,
+          185.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          191.0,
+          1786026103000.0,
+          0.0,
+          191.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          197.0,
+          1786026109000.0,
+          0.0,
+          197.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          203.0,
+          1786026115000.0,
+          0.0,
+          203.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          209.0,
+          1786026121000.0,
+          0.0,
+          209.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          215.0,
+          1786026127000.0,
+          0.0,
+          215.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          216.0,
+          1786026128000.0,
+          0.0,
+          216.0,
+          0.0,
+          25.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          222.0,
+          1786026134000.0,
+          0.0,
+          222.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          228.0,
+          1786026140000.0,
+          0.0,
+          228.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          234.0,
+          1786026146000.0,
+          0.0,
+          234.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          240.0,
+          1786026152000.0,
+          0.0,
+          240.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          246.0,
+          1786026158000.0,
+          0.0,
+          246.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          252.0,
+          1786026164000.0,
+          0.0,
+          252.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          258.0,
+          1786026170000.0,
+          0.0,
+          258.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          264.0,
+          1786026176000.0,
+          0.0,
+          264.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          270.0,
+          1786026182000.0,
+          0.0,
+          270.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          276.0,
+          1786026188000.0,
+          0.0,
+          276.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          278.0,
+          1786026190000.0,
+          0.0,
+          278.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          281.0,
+          1786026193000.0,
+          0.0,
+          281.0,
+          0.0,
+          24.0,
+          81.0
+        ]
+      },
+      {
+        "metrics": [
+          282.0,
+          1786026194000.0,
+          0.0,
+          282.0,
+          0.0,
+          24.0,
+          81.0
+        ]
+      },
+      {
+        "metrics": [
+          288.0,
+          1786026200000.0,
+          0.0,
+          288.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          294.0,
+          1786026206000.0,
+          0.0,
+          294.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          300.0,
+          1786026212000.0,
+          0.0,
+          300.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          306.0,
+          1786026218000.0,
+          0.0,
+          306.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          312.0,
+          1786026224000.0,
+          0.0,
+          312.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          318.0,
+          1786026230000.0,
+          0.0,
+          318.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          324.0,
+          1786026236000.0,
+          0.0,
+          324.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          330.0,
+          1786026242000.0,
+          0.0,
+          330.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          336.0,
+          1786026248000.0,
+          0.0,
+          336.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          342.0,
+          1786026254000.0,
+          0.0,
+          342.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          348.0,
+          1786026260000.0,
+          0.0,
+          348.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          349.0,
+          1786026261000.0,
+          0.0,
+          349.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          355.0,
+          1786026267000.0,
+          0.0,
+          355.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          361.0,
+          1786026273000.0,
+          0.0,
+          361.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          367.0,
+          1786026279000.0,
+          0.0,
+          367.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          373.0,
+          1786026285000.0,
+          0.0,
+          373.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          379.0,
+          1786026291000.0,
+          0.0,
+          379.0,
+          0.0,
+          24.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          385.0,
+          1786026297000.0,
+          0.0,
+          385.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          391.0,
+          1786026303000.0,
+          0.0,
+          391.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          397.0,
+          1786026309000.0,
+          0.0,
+          397.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          403.0,
+          1786026315000.0,
+          0.0,
+          403.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          409.0,
+          1786026321000.0,
+          0.0,
+          409.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          415.0,
+          1786026327000.0,
+          0.0,
+          415.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          419.0,
+          1786026331000.0,
+          0.0,
+          419.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          425.0,
+          1786026337000.0,
+          0.0,
+          425.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          431.0,
+          1786026343000.0,
+          0.0,
+          431.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          437.0,
+          1786026349000.0,
+          0.0,
+          437.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          443.0,
+          1786026355000.0,
+          0.0,
+          443.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          449.0,
+          1786026361000.0,
+          0.0,
+          449.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          455.0,
+          1786026367000.0,
+          0.0,
+          455.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          461.0,
+          1786026373000.0,
+          0.0,
+          461.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          467.0,
+          1786026379000.0,
+          0.0,
+          467.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          473.0,
+          1786026385000.0,
+          0.0,
+          473.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          479.0,
+          1786026391000.0,
+          0.0,
+          479.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          485.0,
+          1786026397000.0,
+          0.0,
+          485.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          491.0,
+          1786026403000.0,
+          0.0,
+          491.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          497.0,
+          1786026409000.0,
+          0.0,
+          497.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          503.0,
+          1786026415000.0,
+          0.0,
+          503.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          509.0,
+          1786026421000.0,
+          0.0,
+          509.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          515.0,
+          1786026427000.0,
+          0.0,
+          515.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          521.0,
+          1786026433000.0,
+          0.0,
+          521.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          527.0,
+          1786026439000.0,
+          0.0,
+          527.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          533.0,
+          1786026445000.0,
+          0.0,
+          533.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          539.0,
+          1786026451000.0,
+          0.0,
+          539.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          545.0,
+          1786026457000.0,
+          0.0,
+          545.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          551.0,
+          1786026463000.0,
+          0.0,
+          551.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          557.0,
+          1786026469000.0,
+          0.0,
+          557.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          563.0,
+          1786026475000.0,
+          0.0,
+          563.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          569.0,
+          1786026481000.0,
+          0.0,
+          569.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          575.0,
+          1786026487000.0,
+          0.0,
+          575.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          581.0,
+          1786026493000.0,
+          0.0,
+          581.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          587.0,
+          1786026499000.0,
+          0.0,
+          587.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          593.0,
+          1786026505000.0,
+          0.0,
+          593.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          599.0,
+          1786026511000.0,
+          0.0,
+          599.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          605.0,
+          1786026517000.0,
+          0.0,
+          605.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          611.0,
+          1786026523000.0,
+          0.0,
+          611.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          617.0,
+          1786026529000.0,
+          0.0,
+          617.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          623.0,
+          1786026535000.0,
+          0.0,
+          623.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          629.0,
+          1786026541000.0,
+          0.0,
+          629.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          635.0,
+          1786026547000.0,
+          0.0,
+          635.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          636.0,
+          1786026548000.0,
+          0.0,
+          636.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          642.0,
+          1786026554000.0,
+          0.0,
+          642.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          648.0,
+          1786026560000.0,
+          0.0,
+          648.0,
+          0.0,
+          23.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          654.0,
+          1786026566000.0,
+          0.0,
+          654.0,
+          0.0,
+          22.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          660.0,
+          1786026572000.0,
+          0.0,
+          660.0,
+          0.0,
+          22.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          666.0,
+          1786026578000.0,
+          0.0,
+          666.0,
+          0.0,
+          22.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          672.0,
+          1786026584000.0,
+          0.0,
+          672.0,
+          0.0,
+          22.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          678.0,
+          1786026590000.0,
+          0.0,
+          678.0,
+          0.0,
+          22.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          680.0,
+          1786026592000.0,
+          0.0,
+          680.0,
+          0.0,
+          22.0,
+          62.0
+        ]
+      },
+      {
+        "metrics": [
+          681.0,
+          1786026593000.0,
+          0.0,
+          681.0,
+          0.0,
+          22.0,
+          61.0
+        ]
+      },
+      {
+        "metrics": [
+          682.0,
+          1786026594000.0,
+          0.0,
+          682.0,
+          0.0,
+          22.0,
+          59.0
+        ]
+      }
+    ],
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 23875994880,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2026-08-06T14:18:32.0",
+        "distance": 0.0,
+        "duration": 682.25,
+        "movingDuration": 351.312,
+        "elapsedDuration": 682.25,
+        "averageSpeed": 0.0,
+        "averageMovingSpeed": 0.0,
+        "calories": 2.0,
+        "averageHR": 80.0,
+        "maxHR": 94.0,
+        "averageTemperature": 24.008797653958943,
+        "maxTemperature": 26.0,
+        "minTemperature": 22.0,
+        "trainingEffect": 0.20000000298023224,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2026-08-06T14:18:31.0",
+        "startTimeGMTDoubleValue": 1786025911000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2026-08-06T14:18:32.0",
+        "startTimeGMTDoubleValue": 1786025912000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 23875994880,
+    "activityUUID": {
+      "uuid": "9ca54797-4ccf-49a2-96e6-d1fd59b718a9"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [
+    {
+      "zoneNumber": 1,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 96
+    },
+    {
+      "zoneNumber": 2,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 115
+    },
+    {
+      "zoneNumber": 3,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 134
+    },
+    {
+      "zoneNumber": 4,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 153
+    },
+    {
+      "zoneNumber": 5,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 172
+    }
+  ],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 23875994880,
+    "exerciseSets": [
+      {
+        "exercises": [
+          {
+            "category": "UNKNOWN",
+            "name": null,
+            "probability": 99.609375
+          },
+          {
+            "category": "CURL",
+            "name": null,
+            "probability": 0.0
+          },
+          {
+            "category": "BENCH_PRESS",
+            "name": null,
+            "probability": 0.0
+          }
+        ],
+        "duration": 79.085,
+        "repetitionCount": 10,
+        "weight": null,
+        "setType": "ACTIVE",
+        "startTime": "2026-08-06T14:18:32.0",
+        "wktStepIndex": null,
+        "messageIndex": 0,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [],
+        "duration": 71.503,
+        "repetitionCount": null,
+        "weight": null,
+        "setType": "REST",
+        "startTime": "2026-08-06T14:19:51.0",
+        "wktStepIndex": null,
+        "messageIndex": 1,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [
+          {
+            "category": "UNKNOWN",
+            "name": null,
+            "probability": 99.609375
+          },
+          {
+            "category": "CURL",
+            "name": null,
+            "probability": 0.0
+          },
+          {
+            "category": "BENCH_PRESS",
+            "name": null,
+            "probability": 0.0
+          }
+        ],
+        "duration": 66.024,
+        "repetitionCount": 0,
+        "weight": null,
+        "setType": "ACTIVE",
+        "startTime": "2026-08-06T14:21:02.0",
+        "wktStepIndex": null,
+        "messageIndex": 2,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [],
+        "duration": 65.857,
+        "repetitionCount": null,
+        "weight": null,
+        "setType": "REST",
+        "startTime": "2026-08-06T14:22:08.0",
+        "wktStepIndex": null,
+        "messageIndex": 3,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [
+          {
+            "category": "UNKNOWN",
+            "name": null,
+            "probability": 99.609375
+          },
+          {
+            "category": "CURL",
+            "name": null,
+            "probability": 0.0
+          },
+          {
+            "category": "BENCH_PRESS",
+            "name": null,
+            "probability": 0.0
+          }
+        ],
+        "duration": 66.907,
+        "repetitionCount": 0,
+        "weight": null,
+        "setType": "ACTIVE",
+        "startTime": "2026-08-06T14:23:14.0",
+        "wktStepIndex": null,
+        "messageIndex": 4,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [],
+        "duration": 69.971,
+        "repetitionCount": null,
+        "weight": null,
+        "setType": "REST",
+        "startTime": "2026-08-06T14:24:21.0",
+        "wktStepIndex": null,
+        "messageIndex": 5,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [
+          {
+            "category": "UNKNOWN",
+            "name": null,
+            "probability": 99.609375
+          },
+          {
+            "category": "CURL",
+            "name": null,
+            "probability": 0.0
+          },
+          {
+            "category": "BENCH_PRESS",
+            "name": null,
+            "probability": 0.0
+          }
+        ],
+        "duration": 66.129,
+        "repetitionCount": 0,
+        "weight": null,
+        "setType": "ACTIVE",
+        "startTime": "2026-08-06T14:25:31.0",
+        "wktStepIndex": null,
+        "messageIndex": 6,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [],
+        "duration": 77.587,
+        "repetitionCount": null,
+        "weight": null,
+        "setType": "REST",
+        "startTime": "2026-08-06T14:26:37.0",
+        "wktStepIndex": null,
+        "messageIndex": 7,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [
+          {
+            "category": "UNKNOWN",
+            "name": null,
+            "probability": 99.609375
+          },
+          {
+            "category": "CURL",
+            "name": null,
+            "probability": 0.0
+          },
+          {
+            "category": "BENCH_PRESS",
+            "name": null,
+            "probability": 0.0
+          }
+        ],
+        "duration": 73.167,
+        "repetitionCount": 0,
+        "weight": null,
+        "setType": "ACTIVE",
+        "startTime": "2026-08-06T14:27:55.0",
+        "wktStepIndex": null,
+        "messageIndex": 8,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      },
+      {
+        "exercises": [],
+        "duration": 46.02,
+        "repetitionCount": null,
+        "weight": null,
+        "setType": "REST",
+        "startTime": "2026-08-06T14:29:08.0",
+        "wktStepIndex": null,
+        "messageIndex": 9,
+        "minimalViableThreshold": null,
+        "avgConcentricMeanVelocity": null,
+        "maxConcentricMeanVelocity": null,
+        "avgEccentricMeanVelocity": null,
+        "maxEccentricMeanVelocity": null,
+        "avgConcentricPeakVelocity": null,
+        "maxConcentricPeakVelocity": null,
+        "avgEccentricPeakVelocity": null,
+        "maxEccentricPeakVelocity": null,
+        "avgMeanPropulsiveVelocity": null,
+        "maxMeanPropulsiveVelocity": null,
+        "avgConcentricMeanPower": null,
+        "maxConcentricMeanPower": null,
+        "avgConcentricPeakPower": null,
+        "maxConcentricPeakPower": null,
+        "avgConcentricDuration": null,
+        "maxConcentricDuration": null,
+        "avgEccentricDuration": null,
+        "maxEccentricDuration": null,
+        "avgConcentricRom": null,
+        "maxConcentricRom": null
+      }
+    ]
+  }
+}

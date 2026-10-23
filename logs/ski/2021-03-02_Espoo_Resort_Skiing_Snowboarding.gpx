@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Garmin Connect" version="1.1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
+  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+  <metadata>
+    <link href="connect.garmin.com">
+      <text>Garmin Connect</text>
+    </link>
+    <time>2021-03-02T15:10:34.000Z</time>
+  </metadata>
+  <trk>
+    <name>Espoo Resort Skiing/Snowboarding</name>
+    <type>resort_skiing_snowboarding_ws</type>
+    <trkseg>
+      <trkpt lat="60.29943949542939662933349609375" lon="24.5531838946044445037841796875">
+        <ele>43.59999847412109375</ele>
+        <time>2021-03-02T15:10:33.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>-1.0</ns3:atemp>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="60.2994296886026859283447265625" lon="24.5532135665416717529296875">
+        <ele>45.40000152587890625</ele>
+        <time>2021-03-02T15:10:34.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>-1.0</ns3:atemp>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="60.29942289926111698150634765625" lon="24.553255476057529449462890625">
+        <ele>47.799999237060546875</ele>
+        <time>2021-03-02T15:10:35.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>-1.0</ns3:atemp>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

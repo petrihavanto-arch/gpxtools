@@ -1,0 +1,573 @@
+{
+  "summary": {
+    "activityId": 8472430879,
+    "activityUUID": {
+      "uuid": "2f6ef2c3-c9e8-4abd-8c39-304e7e8cdf02"
+    },
+    "activityName": "Voss Resort Skiing/Snowboarding",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 172,
+      "typeKey": "resort_skiing_snowboarding_ws",
+      "parentTypeId": 165,
+      "isHidden": false,
+      "restricted": true,
+      "trimmable": false
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 124,
+      "unitKey": "Europe/Paris",
+      "factor": 0.0,
+      "timeZone": "Europe/Paris"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 898460,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2022-03-17T08:40:23.0",
+      "uploadedDate": "2022-03-17T08:40:23.0",
+      "videoUrl": null,
+      "hasPolyline": true,
+      "hasChartData": true,
+      "hasHrTimeInZones": true,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3977950930",
+        "deviceTypePk": 34978,
+        "deviceVersionPk": 898460
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "elevationCorrected": false,
+      "manualActivity": false,
+      "trimmed": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2022-03-10T15:56:21.0",
+      "startTimeGMT": "2022-03-10T14:56:21.0",
+      "startLatitude": 60.90112100355327,
+      "startLongitude": 6.464201593771577,
+      "distance": 0.0,
+      "duration": 0.0,
+      "movingDuration": 0.0,
+      "elapsedDuration": 0.0,
+      "elevationGain": 204.4,
+      "maxElevation": 982.2,
+      "minElevation": 777.8,
+      "averageSpeed": 0.0,
+      "maxSpeed": 0.1120000034570694,
+      "averageHR": 110.0,
+      "maxHR": 152.0,
+      "minHR": 68.0,
+      "averageTemperature": 15.5,
+      "maxTemperature": 21.0,
+      "minTemperature": 10.0,
+      "trainingEffect": 2.5,
+      "anaerobicTrainingEffect": 0.800000011920929,
+      "aerobicTrainingEffectMessage": "MAINTAINING_AEROBIC_FITNESS_1",
+      "anaerobicTrainingEffectMessage": "NO_ANAEROBIC_BENEFIT_0",
+      "endLatitude": 60.89538208208978,
+      "endLongitude": 6.457333462312818,
+      "maxVerticalSpeed": 0.20001220703125003,
+      "minActivityLapDuration": 0.0
+    },
+    "locationName": "Voss"
+  },
+  "details": {
+    "activityId": 8472430879,
+    "measurementCount": 12,
+    "metricsCount": 4,
+    "totalMetricsCount": 4,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "directAirTemperature",
+        "unit": {
+          "id": 227,
+          "key": "celcius",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "directLatitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "directHeartRate",
+        "unit": {
+          "id": 100,
+          "key": "bpm",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 7,
+        "key": "directLongitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 8,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 9,
+        "key": "directSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      },
+      {
+        "metricsIndex": 10,
+        "key": "directElevation",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 11,
+        "key": "directVerticalSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          0.0,
+          0.0,
+          21.0,
+          1646921188000.0,
+          60.90112100355327,
+          69.0,
+          0.0,
+          6.464201593771577,
+          0.0,
+          0.0,
+          777.7999877929688,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          0.0,
+          1.0,
+          21.0,
+          1646921189000.0,
+          60.90112100355327,
+          68.0,
+          1.0,
+          6.464201090857387,
+          0.009999999776482582,
+          0.0,
+          778.0,
+          0.20000000298023224
+        ]
+      },
+      {
+        "metrics": [
+          0.0,
+          1.0,
+          10.0,
+          1646923301000.0,
+          60.89538199827075,
+          152.0,
+          2113.0,
+          6.457333462312818,
+          0.0,
+          0.1120000034570694,
+          982.2000122070312,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          0.0,
+          2.0,
+          10.0,
+          1646923302000.0,
+          60.89538208208978,
+          151.0,
+          2114.0,
+          6.457333462312818,
+          0.009999999776482582,
+          0.1120000034570694,
+          982.0,
+          -0.20000000298023224
+        ]
+      }
+    ],
+    "geoPolylineDTO": {
+      "startPoint": {
+        "lat": 60.90112100355327,
+        "lon": 6.464201593771577,
+        "altitude": null,
+        "time": 1646921188000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "endPoint": {
+        "lat": 60.89538208208978,
+        "lon": 6.457333462312818,
+        "altitude": null,
+        "time": 1646923302000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "minLat": 60.89538199827075,
+      "maxLat": 60.90112100355327,
+      "minLon": 6.457333462312818,
+      "maxLon": 6.464201593771577,
+      "polyline": [
+        {
+          "lat": 60.90112100355327,
+          "lon": 6.464201593771577,
+          "altitude": null,
+          "time": 1646921188000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 60.90112100355327,
+          "lon": 6.464201090857387,
+          "altitude": null,
+          "time": 1646921189000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 60.89538199827075,
+          "lon": 6.457333462312818,
+          "altitude": null,
+          "time": 1646923301000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 60.89538208208978,
+          "lon": 6.457333462312818,
+          "altitude": null,
+          "time": 1646923302000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        }
+      ]
+    },
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 8472430879,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2022-03-10T14:56:21.0",
+        "distance": 0.0,
+        "duration": 0.0,
+        "movingDuration": 0.0,
+        "elapsedDuration": 2114.0,
+        "elevationGain": 204.4,
+        "maxElevation": 982.2,
+        "minElevation": 777.8,
+        "averageSpeed": 0.0,
+        "maxSpeed": 0.0,
+        "averageHR": 110.0,
+        "maxHR": 152.0,
+        "averageTemperature": 15.5,
+        "maxTemperature": 21.0,
+        "minTemperature": 10.0,
+        "endLatitude": 60.89538208208978,
+        "endLongitude": 6.457333462312818,
+        "maxVerticalSpeed": 0.20001220703125003,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 0
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2022-03-10T14:06:22.0",
+        "startTimeGMTDoubleValue": 1646921182000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:06:28.0",
+        "startTimeGMTDoubleValue": 1646921188000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:06:29.0",
+        "startTimeGMTDoubleValue": 1646921189000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:41:40.0",
+        "startTimeGMTDoubleValue": 1646923300000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:41:41.0",
+        "startTimeGMTDoubleValue": 1646923301000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:41:42.0",
+        "startTimeGMTDoubleValue": 1646923302000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:56:16.0",
+        "startTimeGMTDoubleValue": 1646924176000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2022-03-10T14:56:21.0",
+        "startTimeGMTDoubleValue": 1646924181000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 8472430879,
+    "activityUUID": {
+      "uuid": "2f6ef2c3-c9e8-4abd-8c39-304e7e8cdf02"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": "2022-03-10T14:50:00.000+00:00",
+    "temp": 46,
+    "apparentTemp": 43,
+    "dewPoint": 32,
+    "relativeHumidity": 57,
+    "windDirection": 180,
+    "windDirectionCompassPoint": "s",
+    "windSpeed": 7,
+    "windGust": null,
+    "latitude": 61.44999995827675,
+    "longitude": 5.866669965907931,
+    "weatherStationDTO": {
+      "id": "ENBL",
+      "name": "Forde / Bringeland",
+      "timezone": null
+    },
+    "weatherTypeDTO": {
+      "weatherTypePk": null,
+      "desc": "Mostly Cloudy",
+      "image": null
+    }
+  },
+  "hr_zones": [
+    {
+      "zoneNumber": 1,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 98
+    },
+    {
+      "zoneNumber": 2,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 118
+    },
+    {
+      "zoneNumber": 3,
+      "secsInZone": 1.0,
+      "zoneLowBoundary": 137
+    },
+    {
+      "zoneNumber": 4,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 157
+    },
+    {
+      "zoneNumber": 5,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 176
+    }
+  ],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 8472430879,
+    "exerciseSets": null
+  }
+}

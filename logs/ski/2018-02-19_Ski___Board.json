@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "activityId": 2507814176,
+    "activityUUID": {
+      "uuid": "8f4ca0f3-380b-4f35-b1b1-a16b02b1a666"
+    },
+    "activityName": "Ski / Board",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 172,
+      "typeKey": "resort_skiing_snowboarding_ws",
+      "parentTypeId": 165,
+      "isHidden": false,
+      "restricted": true,
+      "trimmable": false
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 143,
+      "unitKey": "Europe/Istanbul",
+      "factor": 0.0,
+      "timeZone": "Europe/Istanbul"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 842274,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2018-02-19T05:03:36.0",
+      "uploadedDate": "2018-02-19T05:03:36.0",
+      "videoUrl": null,
+      "hasPolyline": null,
+      "hasChartData": null,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3906703416",
+        "deviceTypePk": 21600,
+        "deviceVersionPk": 842274
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "manualActivity": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "elevationCorrected": false,
+      "trimmed": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2018-02-19T14:03:27.0",
+      "startTimeGMT": "2018-02-19T11:03:27.0",
+      "duration": 0.0,
+      "elapsedDuration": 0.0
+    }
+  },
+  "details": {
+    "activityId": 0,
+    "measurementCount": 0,
+    "metricsCount": 0,
+    "totalMetricsCount": 0,
+    "metricDescriptors": null,
+    "activityDetailMetrics": null,
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": false
+  },
+  "splits": {
+    "activityId": 2507814176,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2018-02-19T11:03:27.0",
+        "duration": 0.0,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2018-02-19T11:03:19.0",
+        "startTimeGMTDoubleValue": 1519038199000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2018-02-19T11:03:27.0",
+        "startTimeGMTDoubleValue": 1519038207000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 2507814176,
+    "activityUUID": {
+      "uuid": "8f4ca0f3-380b-4f35-b1b1-a16b02b1a666"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 2507814176,
+    "exerciseSets": null
+  }
+}

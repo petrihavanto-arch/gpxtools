@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "activityId": 6339129157,
+    "activityUUID": {
+      "uuid": "014f49cb-2ce2-4655-b593-25dc559e48ca"
+    },
+    "activityName": "Espoo Resort Skiing/Snowboarding",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 172,
+      "typeKey": "resort_skiing_snowboarding_ws",
+      "parentTypeId": 165,
+      "isHidden": false,
+      "restricted": true,
+      "trimmable": false
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 80,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2021-02-26T20:00:26.0",
+      "uploadedDate": "2021-02-26T20:00:26.0",
+      "videoUrl": null,
+      "hasPolyline": null,
+      "hasChartData": null,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "0",
+        "deviceTypePk": 19,
+        "deviceVersionPk": 80
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "manualActivity": true,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "elevationCorrected": false,
+      "trimmed": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2021-02-26T17:10:27.0",
+      "startTimeGMT": "2021-02-26T15:10:27.0",
+      "startLatitude": 60.299665220081806,
+      "startLongitude": 24.55245466902852,
+      "distance": 2.27,
+      "duration": 4.0,
+      "elapsedDuration": 9.998,
+      "elevationGain": 0.0,
+      "averageSpeed": 0.5680000185966492,
+      "maxSpeed": 0.0,
+      "calories": 0.0,
+      "endLatitude": 60.29966429807246,
+      "endLongitude": 24.552450980991125,
+      "minActivityLapDuration": 4.0
+    },
+    "locationName": "Espoo"
+  },
+  "details": {
+    "activityId": 0,
+    "measurementCount": 0,
+    "metricsCount": 0,
+    "totalMetricsCount": 0,
+    "metricDescriptors": null,
+    "activityDetailMetrics": null,
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": false
+  },
+  "splits": {
+    "activityId": 6339129157,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2021-02-26T15:10:27.0",
+        "startLatitude": 60.299665220081806,
+        "startLongitude": 24.55245466902852,
+        "distance": 2.27,
+        "duration": 4.0,
+        "elevationGain": 0.0,
+        "averageSpeed": 0.5680000185966492,
+        "maxSpeed": 0.0,
+        "calories": 0.0,
+        "endLatitude": 60.29966429807246,
+        "endLongitude": 24.552450980991125,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": []
+  },
+  "split_summaries": {
+    "activityId": 6339129157,
+    "activityUUID": {
+      "uuid": "014f49cb-2ce2-4655-b593-25dc559e48ca"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": "2021-02-26T17:00:00.000+00:00",
+    "temp": 36,
+    "apparentTemp": 36,
+    "dewPoint": 35,
+    "relativeHumidity": 97,
+    "windDirection": 0,
+    "windDirectionCompassPoint": "n",
+    "windSpeed": 0,
+    "windGust": null,
+    "latitude": 60.416698,
+    "longitude": 24.4,
+    "weatherStationDTO": {
+      "id": "02758",
+      "name": "02758",
+      "timezone": null
+    },
+    "weatherTypeDTO": {
+      "weatherTypePk": null,
+      "desc": "Unknown",
+      "image": "099.png"
+    }
+  },
+  "hr_zones": [],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 6339129157,
+    "exerciseSets": null
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "activityId": 19132572784,
+    "activityUUID": {
+      "uuid": "04dfc28b-edcb-4ee2-b177-ebe15f1c862a"
+    },
+    "activityName": "Espoo Cycling",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 2,
+      "typeKey": "cycling",
+      "parentTypeId": 17,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 562267,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 1,
+        "formatKey": "tcx"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2025-05-15T13:17:56.0",
+      "uploadedDate": "2025-05-15T13:17:55.0",
+      "videoUrl": null,
+      "hasPolyline": true,
+      "hasChartData": true,
+      "hasHrTimeInZones": true,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": null,
+      "activityImages": [],
+      "manufacturer": "",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3752080436",
+        "deviceTypePk": 14,
+        "deviceVersionPk": 562267
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "favorite": false,
+      "autoCalcCalories": false,
+      "manualActivity": false,
+      "trimmed": false,
+      "elevationCorrected": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2013-06-04T06:33:46.0",
+      "startTimeGMT": "2013-06-04T03:33:46.0",
+      "startLatitude": 60.303122,
+      "startLongitude": 24.765273,
+      "distance": 33529.59,
+      "duration": 4743.33,
+      "movingDuration": 4500.0,
+      "elapsedDuration": 4738.0,
+      "elevationGain": 403.13,
+      "elevationLoss": 404.81,
+      "maxElevation": 51.28,
+      "minElevation": 13.05,
+      "averageSpeed": 7.068787085022548,
+      "averageMovingSpeed": 7.451019965333334,
+      "maxSpeed": 13.465,
+      "calories": 1516.0,
+      "averageHR": 121.0,
+      "maxHR": 155.0,
+      "minHR": 86.0,
+      "endLatitude": 60.221566,
+      "endLongitude": 24.873748,
+      "maxVerticalSpeed": 1.5670000000000002,
+      "minActivityLapDuration": 4743.33
+    },
+    "locationName": "Espoo"
+  },
+  "details": {
+    "activityId": 0,
+    "measurementCount": 0,
+    "metricsCount": 0,
+    "totalMetricsCount": 0,
+    "metricDescriptors": null,
+    "activityDetailMetrics": null,
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": false
+  },
+  "splits": {
+    "activityId": 19132572784,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2013-06-04T03:33:46.0",
+        "distance": 33529.59,
+        "duration": 4743.33,
+        "movingDuration": 4500.0,
+        "elapsedDuration": 4738.0,
+        "elevationGain": 403.13,
+        "elevationLoss": 404.81,
+        "maxElevation": 51.28,
+        "minElevation": 13.05,
+        "averageSpeed": 7.068787085022548,
+        "averageMovingSpeed": 7.451019965333334,
+        "maxSpeed": 13.465,
+        "calories": 1516.0,
+        "averageHR": 121.0,
+        "maxHR": 155.0,
+        "endLatitude": 60.221566,
+        "endLongitude": 24.873748,
+        "maxVerticalSpeed": 1.5670000000000002,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": []
+  },
+  "split_summaries": {
+    "activityId": 19132572784,
+    "activityUUID": {
+      "uuid": "04dfc28b-edcb-4ee2-b177-ebe15f1c862a"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [
+    {
+      "zoneNumber": 1,
+      "secsInZone": 1274.0,
+      "zoneLowBoundary": 98
+    },
+    {
+      "zoneNumber": 2,
+      "secsInZone": 2328.0,
+      "zoneLowBoundary": 117
+    },
+    {
+      "zoneNumber": 3,
+      "secsInZone": 784.0,
+      "zoneLowBoundary": 137
+    },
+    {
+      "zoneNumber": 4,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 156
+    },
+    {
+      "zoneNumber": 5,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 176
+    }
+  ],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 19132572784,
+    "exerciseSets": null
+  }
+}

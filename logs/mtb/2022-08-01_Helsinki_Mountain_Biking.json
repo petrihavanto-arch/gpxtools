@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "activityId": 9317324441,
+    "activityUUID": {
+      "uuid": "f4d18cbc-3b4f-4a34-a5b5-3cc3680cb64c"
+    },
+    "activityName": "Helsinki Mountain Biking",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 5,
+      "typeKey": "mountain_biking",
+      "parentTypeId": 2,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 898460,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2022-08-01T17:06:56.0",
+      "uploadedDate": "2022-08-01T17:06:56.0",
+      "videoUrl": null,
+      "hasPolyline": true,
+      "hasChartData": true,
+      "hasHrTimeInZones": true,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 4,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3977950930",
+        "deviceTypePk": 34978,
+        "deviceVersionPk": 898460
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "manualActivity": false,
+      "trimmed": false,
+      "elevationCorrected": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2022-08-01T17:56:17.0",
+      "startTimeGMT": "2022-08-01T14:56:17.0",
+      "startLatitude": 60.23335841484368,
+      "startLongitude": 24.90917413495481,
+      "distance": 15064.52,
+      "duration": 7612.106,
+      "movingDuration": 5244.0,
+      "elapsedDuration": 7612.106,
+      "elevationGain": 318.0,
+      "elevationLoss": 318.0,
+      "maxElevation": 41.4,
+      "minElevation": 11.4,
+      "averageSpeed": 1.9789999723434448,
+      "averageMovingSpeed": 2.87271539497521,
+      "maxSpeed": 8.303999900817871,
+      "calories": 961.0,
+      "averageHR": 116.0,
+      "maxHR": 151.0,
+      "minHR": 71.0,
+      "averageTemperature": 23.383456579013963,
+      "maxTemperature": 29.0,
+      "minTemperature": 21.0,
+      "trainingEffect": 2.4000000953674316,
+      "anaerobicTrainingEffect": 2.0999999046325684,
+      "aerobicTrainingEffectMessage": "MAINTAINING_AEROBIC_BASE_7",
+      "anaerobicTrainingEffectMessage": "MAINTAINING_ANAEROBIC_BASE_1",
+      "endLatitude": 60.20764340646565,
+      "endLongitude": 24.90914387628436,
+      "maxVerticalSpeed": 2.200000762939453,
+      "minActivityLapDuration": 32.0
+    },
+    "locationName": "Helsinki"
+  },
+  "details": {
+    "activityId": 0,
+    "measurementCount": 0,
+    "metricsCount": 0,
+    "totalMetricsCount": 0,
+    "metricDescriptors": null,
+    "activityDetailMetrics": null,
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": false
+  },
+  "splits": {
+    "activityId": 9317324441,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2022-08-01T14:56:17.0",
+        "startLatitude": 60.23335841484368,
+        "startLongitude": 24.90917413495481,
+        "distance": 5000.0,
+        "duration": 2285.949,
+        "movingDuration": 1605.0,
+        "elapsedDuration": 2285.949,
+        "elevationGain": 106.0,
+        "elevationLoss": 120.0,
+        "maxElevation": 41.4,
+        "minElevation": 14.4,
+        "averageSpeed": 2.187000036239624,
+        "averageMovingSpeed": 3.1152647975077885,
+        "maxSpeed": 7.501999855041504,
+        "calories": 301.0,
+        "averageHR": 108.0,
+        "maxHR": 139.0,
+        "averageTemperature": 24.0,
+        "maxTemperature": 27.0,
+        "minTemperature": 22.0,
+        "endLatitude": 60.20764340646565,
+        "endLongitude": 24.90914387628436,
+        "maxVerticalSpeed": 2.200000762939453,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 0
+      },
+      {
+        "startTimeGMT": "2022-08-01T15:34:23.0",
+        "startLatitude": 60.20764877088368,
+        "startLongitude": 24.909199783578515,
+        "distance": 5000.0,
+        "duration": 2995.56,
+        "movingDuration": 1829.0,
+        "elapsedDuration": 2995.56,
+        "elevationGain": 106.0,
+        "elevationLoss": 102.0,
+        "maxElevation": 35.0,
+        "minElevation": 13.2,
+        "averageSpeed": 1.669000029563904,
+        "averageMovingSpeed": 2.733734281027884,
+        "maxSpeed": 8.303999900817871,
+        "calories": 386.0,
+        "averageHR": 119.0,
+        "maxHR": 148.0,
+        "averageTemperature": 24.0,
+        "maxTemperature": 29.0,
+        "minTemperature": 22.0,
+        "endLatitude": 60.2075563184917,
+        "endLongitude": 24.91357480175793,
+        "maxVerticalSpeed": 2.1999998092651367,
+        "lapIndex": 2,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 1
+      },
+      {
+        "startTimeGMT": "2022-08-01T16:24:19.0",
+        "startLatitude": 60.20754768513143,
+        "startLongitude": 24.913586536422372,
+        "distance": 5000.0,
+        "duration": 2298.597,
+        "movingDuration": 1794.0,
+        "elapsedDuration": 2298.597,
+        "elevationGain": 105.0,
+        "elevationLoss": 96.0,
+        "maxElevation": 40.0,
+        "minElevation": 11.4,
+        "averageSpeed": 2.174999952316284,
+        "averageMovingSpeed": 2.787068004459309,
+        "maxSpeed": 7.921999931335449,
+        "calories": 271.0,
+        "averageHR": 120.0,
+        "maxHR": 151.0,
+        "averageTemperature": 22.0,
+        "maxTemperature": 24.0,
+        "minTemperature": 21.0,
+        "endLatitude": 60.232614520937204,
+        "endLongitude": 24.90925963036716,
+        "maxVerticalSpeed": 1.2000007629394531,
+        "lapIndex": 3,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 2
+      },
+      {
+        "startTimeGMT": "2022-08-01T17:02:38.0",
+        "startLatitude": 60.23262592032552,
+        "startLongitude": 24.9092230014503,
+        "distance": 64.52,
+        "duration": 32.0,
+        "movingDuration": 16.0,
+        "elapsedDuration": 32.0,
+        "elevationGain": 0.0,
+        "elevationLoss": 0.0,
+        "maxElevation": 32.0,
+        "minElevation": 30.6,
+        "averageSpeed": 2.0160000324249268,
+        "averageMovingSpeed": 4.03249979019165,
+        "maxSpeed": 3.9189999103546147,
+        "calories": 3.0,
+        "averageHR": 120.0,
+        "maxHR": 130.0,
+        "averageTemperature": 21.0,
+        "maxTemperature": 21.0,
+        "minTemperature": 21.0,
+        "endLatitude": 60.23311383090913,
+        "endLongitude": 24.909000378102064,
+        "maxVerticalSpeed": 0.20000012715657553,
+        "lapIndex": 4,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 3
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2022-08-01T14:56:17.0",
+        "startTimeGMTDoubleValue": 1659365777000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 9317324441,
+    "activityUUID": {
+      "uuid": "f4d18cbc-3b4f-4a34-a5b5-3cc3680cb64c"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": "2022-08-01T14:00:00.000+00:00",
+    "temp": 68,
+    "apparentTemp": 68,
+    "dewPoint": 55,
+    "relativeHumidity": 64,
+    "windDirection": 120,
+    "windDirectionCompassPoint": "ese",
+    "windSpeed": 12,
+    "windGust": null,
+    "latitude": 60.18329992890358,
+    "longitude": 24.94999995455146,
+    "weatherStationDTO": {
+      "id": "02978",
+      "name": "02978",
+      "timezone": null
+    },
+    "weatherTypeDTO": {
+      "weatherTypePk": null,
+      "desc": "Fair",
+      "image": null
+    }
+  },
+  "hr_zones": [
+    {
+      "zoneNumber": 1,
+      "secsInZone": 980.985,
+      "zoneLowBoundary": 88
+    },
+    {
+      "zoneNumber": 2,
+      "secsInZone": 3907.166,
+      "zoneLowBoundary": 106
+    },
+    {
+      "zoneNumber": 3,
+      "secsInZone": 2041.302,
+      "zoneLowBoundary": 123
+    },
+    {
+      "zoneNumber": 4,
+      "secsInZone": 273.001,
+      "zoneLowBoundary": 141
+    },
+    {
+      "zoneNumber": 5,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 158
+    }
+  ],
+  "gear": [
+    {
+      "gearPk": 26488561,
+      "uuid": "75abdcac1004412d96bc769d943c8ae2",
+      "userProfilePk": 5109179,
+      "gearMakeName": "Other",
+      "gearModelName": "Unknown Bike",
+      "gearTypeName": "Bike",
+      "gearStatusName": "active",
+      "displayName": "mon",
+      "customMakeModel": "m",
+      "imageNameLarge": null,
+      "imageNameMedium": null,
+      "imageNameSmall": null,
+      "dateBegin": "2021-06-02T21:00:00.0",
+      "dateEnd": null,
+      "maximumMeters": 396000.0,
+      "notified": true,
+      "createDate": "2021-06-03T17:44:37.0",
+      "updateDate": "2021-07-05T14:40:38.0"
+    }
+  ],
+  "exercise_sets": {
+    "activityId": 9317324441,
+    "exerciseSets": null
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "summary": {
+    "activityId": 3208103155,
+    "activityUUID": {
+      "uuid": "2959ee3e-daaa-4299-aa82-7fe89c12c320"
+    },
+    "activityName": "Paini",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 11,
+      "typeKey": "indoor_cardio",
+      "parentTypeId": 29,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 2,
+      "typeKey": "private"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": false,
+      "deviceApplicationInstallationId": 80,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2018-12-06T15:31:22.0",
+      "uploadedDate": "2018-12-06T15:31:00.0",
+      "videoUrl": null,
+      "hasPolyline": null,
+      "hasChartData": null,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": [],
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "0",
+        "deviceTypePk": 19,
+        "deviceVersionPk": 80
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "thirdPartyGymEquipment": [],
+      "personalRecord": false,
+      "gcj02": false,
+      "runPowerWindDataEnabled": null,
+      "trimmed": false,
+      "elevationCorrected": false,
+      "manualActivity": true,
+      "autoCalcCalories": true,
+      "favorite": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2018-12-05T17:28:14.479",
+      "startTimeGMT": "2018-12-05T15:28:14.479",
+      "distance": 0.0,
+      "duration": 5340.0,
+      "elapsedDuration": 0.0,
+      "averageSpeed": 0.0,
+      "averageMovingSpeed": 0.0,
+      "totalSets": 0,
+      "activeSets": 0,
+      "maxDepth": 0.0,
+      "averageDepth": 0.0,
+      "surfaceInterval": 0.0,
+      "bottomTime": 0.0,
+      "isDecoDive": false,
+      "floorsDescended": 0.0,
+      "avgVerticalSpeed": 0.0,
+      "caloriesConsumed": 0.0,
+      "waterEstimated": 0.0,
+      "waterConsumed": 0.0,
+      "decoDive": false
+    },
+    "locationName": ""
+  },
+  "details": {
+    "activityId": 0,
+    "measurementCount": 0,
+    "metricsCount": 0,
+    "totalMetricsCount": 0,
+    "metricDescriptors": null,
+    "activityDetailMetrics": null,
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": false
+  },
+  "splits": {
+    "activityId": 3208103155,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2018-12-05T15:28:14.0",
+        "distance": 0.0,
+        "duration": 5340.0,
+        "averageSpeed": 0.0,
+        "calories": 3469.0,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": []
+  },
+  "split_summaries": {
+    "activityId": 3208103155,
+    "activityUUID": {
+      "uuid": "2959ee3e-daaa-4299-aa82-7fe89c12c320"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 3208103155,
+    "exerciseSets": []
+  }
+}

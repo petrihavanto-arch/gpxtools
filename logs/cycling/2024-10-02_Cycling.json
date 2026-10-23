@@ -1,0 +1,375 @@
+{
+  "summary": {
+    "activityId": 17182600761,
+    "activityUUID": {
+      "uuid": "86719137-cc5a-422b-b06f-9c794574ff14"
+    },
+    "activityName": "Cycling",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 2,
+      "typeKey": "cycling",
+      "parentTypeId": 17,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 918087,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 7,
+        "formatKey": "fit"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2024-10-02T09:34:23.0",
+      "uploadedDate": "2024-10-02T09:34:23.0",
+      "videoUrl": null,
+      "hasPolyline": false,
+      "hasChartData": true,
+      "hasHrTimeInZones": false,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": null,
+      "activityImages": [],
+      "manufacturer": "GARMIN",
+      "diveNumber": null,
+      "lapCount": 2,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3977950930",
+        "deviceTypePk": 34978,
+        "deviceVersionPk": 918087
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "trimmed": false,
+      "elevationCorrected": false,
+      "manualActivity": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "runPowerWindDataEnabled": null,
+      "personalRecord": false,
+      "gcj02": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2024-10-02T12:33:58.0",
+      "startTimeGMT": "2024-10-02T09:33:58.0",
+      "distance": 0.0,
+      "duration": 14.367,
+      "movingDuration": 0.0,
+      "elapsedDuration": 14.367,
+      "elevationGain": 0.0,
+      "elevationLoss": 0.0,
+      "maxElevation": 41.0,
+      "minElevation": 41.0,
+      "averageSpeed": 0.0,
+      "calories": 0.0,
+      "averageTemperature": 30.0,
+      "maxTemperature": 30.0,
+      "minTemperature": 30.0,
+      "maxVerticalSpeed": 0.0,
+      "minActivityLapDuration": 6.83
+    }
+  },
+  "details": {
+    "activityId": 17182600761,
+    "measurementCount": 8,
+    "metricsCount": 5,
+    "totalMetricsCount": 5,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "directElevation",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "directAirTemperature",
+        "unit": {
+          "id": 227,
+          "key": "celcius",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 7,
+        "key": "directVerticalSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          41.0,
+          0.0,
+          0.0,
+          1727861638000.0,
+          30.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          41.0,
+          0.0,
+          6.0,
+          1727861644000.0,
+          30.0,
+          6.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          41.0,
+          0.0,
+          7.0,
+          1727861645000.0,
+          30.0,
+          7.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          41.0,
+          0.0,
+          13.0,
+          1727861651000.0,
+          30.0,
+          13.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "metrics": [
+          41.0,
+          0.0,
+          14.0,
+          1727861652000.0,
+          30.0,
+          14.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "geoPolylineDTO": null,
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 17182600761,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2024-10-02T09:33:58.0",
+        "distance": 0.0,
+        "duration": 6.83,
+        "movingDuration": 0.0,
+        "elapsedDuration": 6.83,
+        "elevationGain": 0.0,
+        "elevationLoss": 0.0,
+        "maxElevation": 41.0,
+        "minElevation": 41.0,
+        "averageSpeed": 0.0,
+        "calories": 0.0,
+        "averageTemperature": 30.0,
+        "maxTemperature": 30.0,
+        "minTemperature": 30.0,
+        "maxVerticalSpeed": 0.0,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 0
+      },
+      {
+        "startTimeGMT": "2024-10-02T09:34:05.0",
+        "distance": 0.0,
+        "duration": 7.537,
+        "movingDuration": 0.0,
+        "elapsedDuration": 7.537,
+        "elevationGain": 0.0,
+        "elevationLoss": 0.0,
+        "maxElevation": 41.0,
+        "minElevation": 41.0,
+        "averageSpeed": 0.0,
+        "calories": 0.0,
+        "averageTemperature": 30.0,
+        "maxTemperature": 30.0,
+        "minTemperature": 30.0,
+        "maxVerticalSpeed": 0.0,
+        "lapIndex": 2,
+        "lengthDTOs": [],
+        "connectIQMeasurement": [],
+        "messageIndex": 1
+      }
+    ],
+    "eventDTOs": [
+      {
+        "startTimeGMT": "2024-10-02T09:33:57.0",
+        "startTimeGMTDoubleValue": 1727861637000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      },
+      {
+        "startTimeGMT": "2024-10-02T09:33:58.0",
+        "startTimeGMTDoubleValue": 1727861638000.0,
+        "sectionTypeDTO": {
+          "id": 4,
+          "key": "timerTrigger",
+          "sectionTypeKey": "TIMER_TRIGGER"
+        }
+      }
+    ]
+  },
+  "split_summaries": {
+    "activityId": 17182600761,
+    "activityUUID": {
+      "uuid": "86719137-cc5a-422b-b06f-9c794574ff14"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [],
+  "gear": [
+    {
+      "gearPk": 26488561,
+      "uuid": "75abdcac1004412d96bc769d943c8ae2",
+      "userProfilePk": 5109179,
+      "gearMakeName": "Other",
+      "gearModelName": "Unknown Bike",
+      "gearTypeName": "Bike",
+      "gearStatusName": "active",
+      "displayName": "mon",
+      "customMakeModel": "m",
+      "imageNameLarge": null,
+      "imageNameMedium": null,
+      "imageNameSmall": null,
+      "dateBegin": "2021-06-02T21:00:00.0",
+      "dateEnd": null,
+      "maximumMeters": 396000.0,
+      "notified": true,
+      "createDate": "2021-06-03T17:44:37.0",
+      "updateDate": "2021-07-05T14:40:38.0"
+    }
+  ],
+  "exercise_sets": {
+    "activityId": 17182600761,
+    "exerciseSets": null
+  }
+}

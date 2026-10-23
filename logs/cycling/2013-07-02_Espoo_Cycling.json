@@ -1,0 +1,402 @@
+{
+  "summary": {
+    "activityId": 19132574430,
+    "activityUUID": {
+      "uuid": "d1d30684-9023-4fed-9d47-a1fc1916a1cf"
+    },
+    "activityName": "Espoo Cycling",
+    "userProfileId": 5109179,
+    "isMultiSportParent": false,
+    "activityTypeDTO": {
+      "typeId": 2,
+      "typeKey": "cycling",
+      "parentTypeId": 17,
+      "isHidden": false,
+      "restricted": false,
+      "trimmable": true
+    },
+    "eventTypeDTO": {
+      "typeId": 9,
+      "typeKey": "uncategorized",
+      "sortOrder": 10
+    },
+    "accessControlRuleDTO": {
+      "typeId": 1,
+      "typeKey": "public"
+    },
+    "timeZoneUnitDTO": {
+      "unitId": 473,
+      "unitKey": "Europe/Athens",
+      "factor": 0.0,
+      "timeZone": "Europe/Athens"
+    },
+    "metadataDTO": {
+      "isOriginal": true,
+      "deviceApplicationInstallationId": 562267,
+      "agentApplicationInstallationId": null,
+      "agentString": null,
+      "fileFormat": {
+        "formatId": 1,
+        "formatKey": "tcx"
+      },
+      "associatedCourseId": null,
+      "lastUpdateDate": "2025-05-15T13:18:08.0",
+      "uploadedDate": "2025-05-15T13:18:08.0",
+      "videoUrl": null,
+      "hasPolyline": false,
+      "hasChartData": false,
+      "hasHrTimeInZones": true,
+      "hasPowerTimeInZones": false,
+      "userInfoDto": {
+        "userProfilePk": 5109179,
+        "displayname": "PetriHavanto",
+        "fullname": "Petri Havanto",
+        "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/6bab4e94-ffd1-44df-a1f8-c8f44f17c2ae-5109179.png",
+        "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/cef97d4c-56cb-4cb4-8eb0-2aaf0168b7bd-5109179.png",
+        "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/bf90a9c8-5c4d-4202-be98-f18d60c845b7-5109179.png",
+        "userPro": false
+      },
+      "childIds": [],
+      "childActivityTypes": [],
+      "sensors": null,
+      "activityImages": [],
+      "manufacturer": "",
+      "diveNumber": null,
+      "lapCount": 1,
+      "associatedWorkoutId": null,
+      "isAtpActivity": null,
+      "deviceMetaDataDTO": {
+        "deviceId": "3752080436",
+        "deviceTypePk": 14,
+        "deviceVersionPk": 562267
+      },
+      "hasIntensityIntervals": false,
+      "hasSplits": false,
+      "eBikeMaxAssistModes": null,
+      "eBikeBatteryUsage": null,
+      "eBikeBatteryRemaining": null,
+      "eBikeAssistModeInfoDTOList": null,
+      "hasRunPowerWindData": null,
+      "calendarEventInfo": null,
+      "groupRideUUID": null,
+      "hasHeatMap": false,
+      "hasMultiDayActivities": false,
+      "trimmed": false,
+      "runPowerWindDataEnabled": null,
+      "manualActivity": false,
+      "elevationCorrected": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "personalRecord": false,
+      "gcj02": false
+    },
+    "summaryDTO": {
+      "startTimeLocal": "2013-07-02T17:44:45.0",
+      "startTimeGMT": "2013-07-02T14:44:45.0",
+      "startLatitude": 60.305389,
+      "startLongitude": 24.765148,
+      "distance": 0.05,
+      "duration": 2.52,
+      "movingDuration": 0.0,
+      "elapsedDuration": 1.0,
+      "elevationGain": 0.0,
+      "elevationLoss": 0.0,
+      "maxElevation": 61.65,
+      "minElevation": 61.65,
+      "averageSpeed": 0.020049603174603175,
+      "maxSpeed": 0.0,
+      "calories": 0.0,
+      "averageHR": 99.0,
+      "maxHR": 99.0,
+      "minHR": 98.0,
+      "endLatitude": 60.305389,
+      "endLongitude": 24.76515,
+      "maxVerticalSpeed": 0.0,
+      "minActivityLapDuration": 2.52
+    },
+    "locationName": "Espoo"
+  },
+  "details": {
+    "activityId": 19132574430,
+    "measurementCount": 10,
+    "metricsCount": 2,
+    "totalMetricsCount": 2,
+    "metricDescriptors": [
+      {
+        "metricsIndex": 0,
+        "key": "directElevation",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 1,
+        "key": "sumElapsedDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 2,
+        "key": "sumDistance",
+        "unit": {
+          "id": 1,
+          "key": "meter",
+          "factor": 100.0
+        }
+      },
+      {
+        "metricsIndex": 3,
+        "key": "sumDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 4,
+        "key": "sumMovingDuration",
+        "unit": {
+          "id": 40,
+          "key": "second",
+          "factor": 1000.0
+        }
+      },
+      {
+        "metricsIndex": 5,
+        "key": "directHeartRate",
+        "unit": {
+          "id": 100,
+          "key": "bpm",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 6,
+        "key": "directLongitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 7,
+        "key": "directLatitude",
+        "unit": {
+          "id": 60,
+          "key": "dd",
+          "factor": 1.0
+        }
+      },
+      {
+        "metricsIndex": 8,
+        "key": "directTimestamp",
+        "unit": {
+          "id": 120,
+          "key": "gmt",
+          "factor": 0.0
+        }
+      },
+      {
+        "metricsIndex": 9,
+        "key": "directVerticalSpeed",
+        "unit": {
+          "id": 20,
+          "key": "mps",
+          "factor": 0.1
+        }
+      }
+    ],
+    "activityDetailMetrics": [
+      {
+        "metrics": [
+          61.599998474121094,
+          0.0,
+          0.05000000074505806,
+          0.0,
+          0.0,
+          99.0,
+          24.765147976577282,
+          60.305388970300555,
+          1372776286000.0,
+          null
+        ]
+      },
+      {
+        "metrics": [
+          61.599998474121094,
+          1.0,
+          0.05000000074505806,
+          1.0,
+          0.0,
+          98.0,
+          24.765149988234043,
+          60.305388970300555,
+          1372776287000.0,
+          0.0
+        ]
+      }
+    ],
+    "geoPolylineDTO": {
+      "startPoint": {
+        "lat": 60.305388970300555,
+        "lon": 24.765147976577282,
+        "altitude": null,
+        "time": 1372776286000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "endPoint": {
+        "lat": 60.305388970300555,
+        "lon": 24.765149988234043,
+        "altitude": null,
+        "time": 1372776287000,
+        "timerStart": false,
+        "timerStop": false,
+        "distanceFromPreviousPoint": null,
+        "distanceInMeters": null,
+        "speed": 0.0,
+        "cumulativeAscent": null,
+        "cumulativeDescent": null,
+        "extendedCoordinate": false,
+        "valid": true
+      },
+      "minLat": 60.305388970300555,
+      "maxLat": 60.305388970300555,
+      "minLon": 24.765147976577282,
+      "maxLon": 24.765149988234043,
+      "polyline": [
+        {
+          "lat": 60.305388970300555,
+          "lon": 24.765147976577282,
+          "altitude": null,
+          "time": 1372776286000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        },
+        {
+          "lat": 60.305388970300555,
+          "lon": 24.765149988234043,
+          "altitude": null,
+          "time": 1372776287000,
+          "timerStart": false,
+          "timerStop": false,
+          "distanceFromPreviousPoint": null,
+          "distanceInMeters": null,
+          "speed": 0.0,
+          "cumulativeAscent": null,
+          "cumulativeDescent": null,
+          "extendedCoordinate": false,
+          "valid": true
+        }
+      ]
+    },
+    "heartRateDTOs": null,
+    "pendingData": null,
+    "detailsAvailable": true
+  },
+  "splits": {
+    "activityId": 19132574430,
+    "lapDTOs": [
+      {
+        "startTimeGMT": "2013-07-02T14:44:45.0",
+        "startLatitude": 60.305389,
+        "startLongitude": 24.765148,
+        "distance": 0.05,
+        "duration": 2.52,
+        "movingDuration": 0.0,
+        "elapsedDuration": 1.0,
+        "elevationGain": 0.0,
+        "elevationLoss": 0.0,
+        "maxElevation": 61.65,
+        "minElevation": 61.65,
+        "averageSpeed": 0.020049603174603175,
+        "maxSpeed": 0.0,
+        "calories": 0.0,
+        "averageHR": 99.0,
+        "maxHR": 99.0,
+        "endLatitude": 60.305389,
+        "endLongitude": 24.76515,
+        "maxVerticalSpeed": 0.0,
+        "lapIndex": 1,
+        "lengthDTOs": [],
+        "connectIQMeasurement": []
+      }
+    ],
+    "eventDTOs": []
+  },
+  "split_summaries": {
+    "activityId": 19132574430,
+    "activityUUID": {
+      "uuid": "d1d30684-9023-4fed-9d47-a1fc1916a1cf"
+    },
+    "splitSummaries": []
+  },
+  "weather": {
+    "issueDate": null,
+    "temp": null,
+    "apparentTemp": null,
+    "dewPoint": null,
+    "relativeHumidity": null,
+    "windDirection": null,
+    "windDirectionCompassPoint": null,
+    "windSpeed": null,
+    "windGust": null,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "weatherStationDTO": null,
+    "weatherTypeDTO": null
+  },
+  "hr_zones": [
+    {
+      "zoneNumber": 1,
+      "secsInZone": 1.0,
+      "zoneLowBoundary": 98
+    },
+    {
+      "zoneNumber": 2,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 117
+    },
+    {
+      "zoneNumber": 3,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 137
+    },
+    {
+      "zoneNumber": 4,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 156
+    },
+    {
+      "zoneNumber": 5,
+      "secsInZone": 0.0,
+      "zoneLowBoundary": 176
+    }
+  ],
+  "gear": [],
+  "exercise_sets": {
+    "activityId": 19132574430,
+    "exerciseSets": null
+  }
+}
